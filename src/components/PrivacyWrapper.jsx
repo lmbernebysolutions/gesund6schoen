@@ -60,10 +60,10 @@ const PrivacyWrapper = ({ category, service, children, placeholderImage, placeho
           onClick={handleAccept}
           className="px-6 py-3 bg-[var(--color-primary)] text-[var(--color-dark)] rounded-full font-bold hover:bg-[var(--color-primary-dark)] transition-colors shadow-md"
         >
-          Inhalt laden & zustimmen
+          Inhalt laden & Cookies akzeptieren
         </button>
         <p className="mt-3 text-xs text-gray-400">
-          Mit dem Laden stimmen Sie der Datenschutzerklärung von {service} zu.
+          Mit dem Laden aktivieren Sie Dienste der Kategorie "Marketing" (u.a. {service}).
         </p>
       </div>
     </div>

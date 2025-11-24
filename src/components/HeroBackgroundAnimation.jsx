@@ -198,8 +198,8 @@ const HeroBackgroundAnimation = () => {
                       { cx: 290, cy: 160, rx: 13, ry: 20, rot: 5, d: "M282,150 A 13 20 5 1 1 298,170" }
                     ].map((toe, i) => (
                       <g key={i} ref={el => toeRefs.current[i] = el} className="toe">
-                          <ellipse class="fill-foot" cx={toe.cx} cy={toe.cy} rx={toe.rx} ry={toe.ry} transform={`rotate(${toe.rot} ${toe.cx} ${toe.cy})`} />
-                          <path class="stroke-main" d={toe.d} strokeWidth="1.2" fill="none"/>
+                          <ellipse className="fill-foot" cx={toe.cx} cy={toe.cy} rx={toe.rx} ry={toe.ry} transform={`rotate(${toe.rot} ${toe.cx} ${toe.cy})`} />
+                          <path className="stroke-main" d={toe.d} strokeWidth="1.2" fill="none"/>
                       </g>
                     ))}
                 </g>
@@ -211,8 +211,8 @@ const HeroBackgroundAnimation = () => {
                 <path ref={el => fillRefs.current[2] = el} className="fill-body fill-shape" d="M340,245 C370,205 440,185 470,210 L 480,230 C 440,205 390,235 360,265 Z" />
                 
                 <g ref={el => toeRefs.current[5] = el} className="toe" style={{ transitionDelay: '200ms' }}>
-                    <circle class="fill-body" cx="490" cy="190" r="24" />
-                    <circle class="stroke-main" cx="490" cy="190" r="24" fill="none"/>
+                    <circle className="fill-body" cx="490" cy="190" r="24" />
+                    <circle className="stroke-main" cx="490" cy="190" r="24" fill="none"/>
                 </g>
 
                 <path ref={el => pathRefs.current[2] = el} className="stroke-main path-draw" data-delay="300" d="M372,477 C460,370 530,250 530,120 C528,135 505,175 500,210" />
