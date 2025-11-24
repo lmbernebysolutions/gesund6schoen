@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, X, Instagram, ExternalLink, Check, Leaf, Heart, Sparkles } from 'lucide-react';
+import { ArrowRight, X, Instagram, ExternalLink, Check, Leaf, Heart, Sparkles, ChevronRight } from 'lucide-react';
 import { InstagramEmbed } from 'react-social-media-embed';
 import SectionHeader from './SectionHeader';
 
@@ -103,8 +103,14 @@ const Services = () => {
           subtitle="Jeder Bereich meines Studios ist darauf spezialisiert, Ihnen das beste Ergebnis zu liefern."
         />
 
-        {/* Mobile: Horizontal Scroll / Desktop: Grid */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 -mx-6 px-6 md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:px-0 scrollbar-hide">
+        <div className="relative">
+           {/* Swipe Indication for Mobile */}
+           <div className="md:hidden absolute -top-8 right-0 flex items-center gap-1 text-xs font-bold text-gray-400 animate-pulse">
+             <span>Swipe</span> <ChevronRight size={14} />
+           </div>
+
+          {/* Mobile: Horizontal Scroll / Desktop: Grid */}
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 -mx-6 px-6 md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0 md:px-0 scrollbar-hide">
           {services.map((service, index) => (
             <motion.div
               key={index}

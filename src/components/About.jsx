@@ -7,13 +7,13 @@ const About = () => {
     <div className="relative w-full lg:h-full">
       <div className="absolute top-[-20px] left-[-20px] w-full h-full border-2 border-[var(--color-primary)] rounded-blob z-0 transform -rotate-3 hidden lg:block"></div>
       
-      <div className="relative z-10 w-full rounded-blob shadow-xl overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-full">
-        <img 
-          src="/2025-07-01 (9).webp" 
-          alt="Die Inhaberin" 
-          className="w-full h-full object-cover scale-125 origin-left"
-        />
-      </div>
+            <div className="relative z-10 w-full rounded-blob shadow-xl overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-full">
+                <img 
+                  src="/2025-07-01 (9).webp" 
+                  alt="Die Inhaberin" 
+                  className="w-full h-full object-cover object-[25%_center]"
+                />
+              </div>
 
       {/* Social Proof Badge */}
       <motion.div 

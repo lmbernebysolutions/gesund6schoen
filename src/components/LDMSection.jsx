@@ -99,22 +99,24 @@ const LDMSection = () => {
         </div>
 
         {/* Balance Accordion/Grid - FIX: Improved Text Contrast */}
-        <div className="mt-16 grid md:grid-cols-2 gap-8">
-          <div className="p-8 bg-[#252525] rounded-2xl border border-[var(--color-secondary)]/30 shadow-lg">
-            <h4 className="text-lg font-bold mb-3 flex items-center gap-2 text-[var(--color-secondary)] justify-center lg:justify-start">
-              <Sparkles className="shrink-0" size={20} /> Wirkung auf das Gewebe
+        {/* Changed to grid-cols-2 on mobile as well for side-by-side layout */}
+        <div className="mt-16 grid grid-cols-2 gap-4 md:gap-8">
+          <div className="p-4 md:p-8 bg-[#252525] rounded-2xl border border-[var(--color-secondary)]/30 shadow-lg">
+            <h4 className="text-sm md:text-lg font-bold mb-3 flex flex-col md:flex-row items-center gap-2 text-[var(--color-secondary)] text-center md:text-left justify-center md:justify-start">
+              <Sparkles className="shrink-0" size={20} /> 
+              <span>Wirkung auf das Gewebe</span>
             </h4>
-            <p className="text-sm text-gray-100 leading-relaxed text-center lg:text-left">
-              Das Zauberwort heißt <strong>"Balance"</strong>! Ist das Gleichgewicht zwischen Aufbau und Abbau im Bindegewebe gestört, altert die Haut. LDM® Plus hilft, dieses Gleichgewicht im Gewebe zu verbessern. Das Ergebnis? Eine gesündere, schöner aussehende Haut.
+            <p className="text-xs md:text-sm text-gray-100 leading-relaxed text-center md:text-left">
+              Das Zauberwort heißt <strong>"Balance"</strong>! Ist das Gleichgewicht im Bindegewebe gestört, altert die Haut. LDM® Plus hilft, dieses Gleichgewicht zu verbessern.
             </p>
           </div>
-          <div className="p-8 bg-[#2a2a22] rounded-2xl border border-[var(--color-primary)]/30 shadow-lg">
-            <h4 className="text-lg font-bold mb-3 flex items-center gap-2 text-[var(--color-primary)] justify-center lg:justify-start">
+          <div className="p-4 md:p-8 bg-[#2a2a22] rounded-2xl border border-[var(--color-primary)]/30 shadow-lg">
+            <h4 className="text-sm md:text-lg font-bold mb-3 flex flex-col md:flex-row items-center gap-2 text-[var(--color-primary)] text-center md:text-left justify-center md:justify-start">
               <div className="w-5 h-5 rounded-full border border-[var(--color-primary)] flex items-center justify-center text-[10px] shrink-0">MHz</div> 
-              Wirkung auf Fettgewebe
+              <span>Wirkung auf Fettgewebe</span>
             </h4>
-            <p className="text-sm text-gray-100 leading-relaxed text-center lg:text-left">
-              Mit der TWL-Methode erreichen spezifische 1 MHz und 3 MHz Frequenzen effektiv tieferes Fettgewebe. Diätresistente Fettdepots können "ausgepumpt" (drainiert) und die Lipolyse lokal stimuliert werden.
+            <p className="text-xs md:text-sm text-gray-100 leading-relaxed text-center md:text-left">
+              Mit der TWL-Methode erreichen spezifische 1 MHz und 3 MHz Frequenzen effektiv tieferes Fettgewebe. Fettdepots können "ausgepumpt" werden.
             </p>
           </div>
         </div>

@@ -2,24 +2,31 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Maximize2 } from 'lucide-react';
 import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
 import SectionHeader from './SectionHeader';
 
 const Studio = () => {
   const [index, setIndex] = useState(-1);
 
   const studioImages = [
-    "/2025-07-01 (2).webp",
-    "/2025-07-01 (3).webp",
-    "/2025-07-01 (4).webp",
-    "/2025-07-01 (7).webp",
+    { src: "/2025-07-01 (2).webp", title: "Behandlungsplatz Kosmetik", description: "Moderner, heller Bereich für Gesichtsbehandlungen." },
+    { src: "/2025-07-01 (3).webp", title: "Entspannungsraum", description: "Ruheoase für Kosmetik und Massage." },
+    { src: "/2025-07-01 (4).webp", title: "Bereich für Fußpflege", description: "Komfortable Ausstattung für Ihre Fußgesundheit." },
+    { src: "/2025-07-01 (7).webp", title: "Nageldesign-Studio", description: "Professioneller Arbeitsplatz für kreatives Nageldesign." },
   ];
 
-  const slides = studioImages.map(src => ({ src }));
+  const slides = studioImages.map(item => ({ 
+    src: item.src,
+    title: item.title,
+    description: item.description
+  }));
 
-  const ImageOverlay = () => (
-    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+  const ImageOverlay = ({ label }) => (
+    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2">
       <Maximize2 className="text-white drop-shadow-md" size={32} />
+      <span className="text-white font-bold text-sm drop-shadow-md">{label}</span>
     </div>
   );
 
@@ -41,8 +48,8 @@ const Studio = () => {
             transition={{ duration: 0.3 }}
             onClick={() => setIndex(0)}
           >
-            <img src={studioImages[0]} alt="Studio 1" className="w-full h-full object-cover" />
-            <ImageOverlay />
+            <img src={studioImages[0].src} alt={studioImages[0].title} className="w-full h-full object-cover" />
+            <ImageOverlay label={studioImages[0].title} />
           </motion.div>
           
           {/* Klein 1 - Rechts Oben */}
@@ -52,8 +59,8 @@ const Studio = () => {
             transition={{ duration: 0.3 }}
             onClick={() => setIndex(1)}
           >
-            <img src={studioImages[1]} alt="Studio 2" className="w-full h-full object-cover" />
-            <ImageOverlay />
+            <img src={studioImages[1].src} alt={studioImages[1].title} className="w-full h-full object-cover" />
+            <ImageOverlay label={studioImages[1].title} />
           </motion.div>
           
           {/* Klein 2 - Rechts Mitte */}
@@ -63,8 +70,8 @@ const Studio = () => {
             transition={{ duration: 0.3 }}
             onClick={() => setIndex(2)}
           >
-            <img src={studioImages[2]} alt="Studio 3" className="w-full h-full object-cover" />
-            <ImageOverlay />
+            <img src={studioImages[2].src} alt={studioImages[2].title} className="w-full h-full object-cover" />
+            <ImageOverlay label={studioImages[2].title} />
           </motion.div>
           
           {/* Breites Bild - Unten */}
@@ -74,8 +81,8 @@ const Studio = () => {
             transition={{ duration: 0.3 }}
             onClick={() => setIndex(3)}
           >
-            <img src={studioImages[3]} alt="Studio 4" className="w-full h-full object-cover" />
-            <ImageOverlay />
+            <img src={studioImages[3].src} alt={studioImages[3].title} className="w-full h-full object-cover" />
+            <ImageOverlay label={studioImages[3].title} />
           </motion.div>
         </div>
       </div>
@@ -85,6 +92,7 @@ const Studio = () => {
         index={index}
         close={() => setIndex(-1)}
         slides={slides}
+        plugins={[Captions]}
       />
     </section>
   );
