@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Instagram } from 'lucide-react';
+import PrivacyWrapper from './PrivacyWrapper';
 
 const Footer = () => {
   return (
@@ -96,18 +97,26 @@ const Footer = () => {
           </div>
 
           {/* Karte */}
-          <div className="lg:col-span-1 h-full min-h-[300px] rounded-3xl overflow-hidden relative border-4 border-white/10 shadow-xl">
-             <iframe 
-               title="Standort Karte"
-               width="100%" 
-               height="100%" 
-               frameBorder="0" 
-               scrolling="no" 
-               marginHeight="0" 
-               marginWidth="0" 
-               style={{ filter: 'grayscale(100%) invert(90%)' }}
-               src="https://maps.google.com/maps?q=Gesund+und+Schön+Marktgässchen+4+Aue-Bad+Schlema&t=&z=15&ie=UTF8&iwloc=&output=embed"
-             ></iframe>
+          <div className="lg:col-span-1 h-full min-h-[300px] rounded-3xl overflow-hidden relative border-4 border-white/10 shadow-xl bg-gray-800">
+             <PrivacyWrapper 
+               category="marketing" 
+               service="Google Maps"
+               placeholderText="Um die interaktive Karte zu sehen, müssen Sie externe Inhalte (Google Maps) aktivieren."
+             >
+               <iframe 
+                 title="Standort Karte"
+                 width="100%" 
+                 height="100%" 
+                 frameBorder="0" 
+                 scrolling="no" 
+                 marginHeight="0" 
+                 marginWidth="0" 
+                 style={{ filter: 'grayscale(100%) invert(90%)' }}
+                 data-category="marketing"
+                 data-service="googleMaps"
+                 src="https://maps.google.com/maps?q=Gesund+und+Schön+Marktgässchen+4+Aue-Bad+Schlema&t=&z=15&ie=UTF8&iwloc=&output=embed"
+               ></iframe>
+             </PrivacyWrapper>
              <div className="absolute inset-0 pointer-events-none border-4 border-[var(--color-primary)]/20 rounded-3xl"></div>
           </div>
         </div>
@@ -116,8 +125,8 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>© {new Date().getFullYear()} Gesund & Schön. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Impressum</a>
-            <a href="#" className="hover:text-white transition-colors">Datenschutz</a>
+            <a href="#impressum" className="hover:text-white transition-colors">Impressum</a>
+            <a href="#datenschutz" className="hover:text-white transition-colors">Datenschutz</a>
           </div>
         </div>
       </div>

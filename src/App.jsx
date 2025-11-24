@@ -9,11 +9,15 @@ import Specials from './components/Specials';
 import Products from './components/Products';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
+import CookieConsentManager from './components/CookieConsentManager';
+import LegalPages from './components/LegalPages';
 import './styles/global.css';
 
 function App() {
   return (
     <div className="app-container">
+      <CookieConsentManager />
+      <LegalPages />
       <Navigation />
       
       <main>

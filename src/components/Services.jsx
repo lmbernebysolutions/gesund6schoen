@@ -4,6 +4,7 @@ import { ArrowRight, X, Instagram, ExternalLink, Check, Leaf, Heart, Sparkles, C
 import { InstagramEmbed } from 'react-social-media-embed';
 import SectionHeader from './SectionHeader';
 import { useFocusTrap } from '../hooks/useFocusTrap';
+import PrivacyWrapper from './PrivacyWrapper';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -284,8 +285,14 @@ const Services = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {instaLinks.map((link, idx) => (
                     <div key={idx} className="flex justify-center">
-                      <div className="w-full max-w-[328px] overflow-hidden rounded-xl shadow-sm">
-                        <InstagramEmbed url={link} width="100%" />
+                      <div className="w-full max-w-[328px] overflow-hidden rounded-xl shadow-sm bg-white">
+                        <PrivacyWrapper 
+                          category="marketing" 
+                          service="Instagram"
+                          placeholderText="Um diesen Instagram-Post zu sehen, aktivieren Sie bitte externe Medien."
+                        >
+                           <InstagramEmbed url={link} width="100%" />
+                        </PrivacyWrapper>
                       </div>
                     </div>
                   ))}
