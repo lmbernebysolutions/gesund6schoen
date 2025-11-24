@@ -10,10 +10,10 @@ const HeroBackgroundAnimation = () => {
 
   useEffect(() => {
     const runAnimation = () => {
-      // 1. Reset (Hard Reset)
+      // 1. Reset (Hard Reset) - Start invisible
       if (containerRef.current) {
-        containerRef.current.style.opacity = '0.65'; // Much more visible base opacity
-        containerRef.current.style.transition = 'opacity 1.5s ease-in-out';
+        containerRef.current.style.opacity = '0';
+        containerRef.current.style.transition = 'opacity 3s ease-in-out';
         containerRef.current.classList.remove('animate-pulse-slow'); // Reset pulse
       }
 
@@ -74,24 +74,37 @@ const HeroBackgroundAnimation = () => {
         }, 3600 + (index * 300));
       });
 
-      // Phase 6: Loop (longer cycle)
+      // Phase 0: Fade in container smoothly (starts immediately with animation)
+      if (containerRef.current) {
+        setTimeout(() => {
+          containerRef.current.style.opacity = '0.65'; // Fade in to full visibility
+        }, 100);
+      }
+
+      // Phase 6: Hold at full visibility after animation completes
       setTimeout(() => {
         if (containerRef.current) {
            containerRef.current.classList.add('animate-pulse-slow');
         }
-      }, 6000); // Start pulsing after drawing completes
+      }, 6000); // Start subtle pulsing after drawing completes
 
-      setTimeout(loopSequence, 13000);
+      // Phase 7: Fade out smoothly
+      setTimeout(() => {
+        if (containerRef.current) {
+          containerRef.current.classList.remove('animate-pulse-slow');
+          containerRef.current.style.opacity = '0'; // Fade out smoothly
+        }
+      }, 10000); // Start fading out after holding
+
+      // Phase 8: Loop - wait for fade out to complete, then restart
+      setTimeout(loopSequence, 14000);
     };
 
     const loopSequence = () => {
-      if (containerRef.current) {
-        containerRef.current.classList.remove('animate-pulse-slow'); // Stop pulse before fade out
-        containerRef.current.style.opacity = '0';
-        setTimeout(() => {
-           runAnimation();
-        }, 1500); // Longer fade out transition
-      }
+      // Reset and restart after fade out is complete
+      setTimeout(() => {
+        runAnimation();
+      }, 500); // Small delay before restart
     };
 
     // Initial Start
@@ -143,8 +156,8 @@ const HeroBackgroundAnimation = () => {
   return (
     <div 
       ref={containerRef} 
-      className="absolute inset-0 flex items-center justify-start pointer-events-none overflow-hidden"
-      style={{ opacity: 0.65, zIndex: 0, left: '-5%' }} // More visible colors, shifted 5% left
+      className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
+      style={{ opacity: 0, zIndex: 0 }} // Start invisible, will fade in
     >
       <div className="relative w-full max-w-[1000px] h-auto scale-125 md:scale-100">
         <svg viewBox="0 0 600 550" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-xl">
