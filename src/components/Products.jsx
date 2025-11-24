@@ -92,20 +92,20 @@ const Products = () => {
           </div>
           
           {/* Text List of all partners for completeness */}
-          <div className="mt-16 text-center">
-             <p className="text-gray-500 text-sm uppercase tracking-widest font-bold mb-4">Offizielle Kooperationspartner</p>
-             <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-gray-700 font-medium">
-               <span>Charlotte Meentzen</span>
-               <span>•</span>
-               <span>arcaya</span>
-               <span>•</span>
-               <span>Jet Set Beauty</span>
-               <span>•</span>
-               <span>Nailcode</span>
-               <span>•</span>
-               <span>Gehwol</span>
-               <span>•</span>
-               <span>Allpresan</span>
+          <div className="mt-10 md:mt-16 text-center px-4">
+             <p className="text-gray-500 text-xs md:text-sm uppercase tracking-widest font-bold mb-4 md:mb-6">Offizielle Kooperationspartner</p>
+             <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 md:gap-x-8 text-sm md:text-base text-gray-700 font-medium leading-relaxed">
+               <span className="whitespace-nowrap">Charlotte Meentzen</span>
+               <span className="text-[var(--color-primary)]">•</span>
+               <span className="whitespace-nowrap">arcaya</span>
+               <span className="text-[var(--color-primary)]">•</span>
+               <span className="whitespace-nowrap">Jet Set Beauty</span>
+               <span className="text-[var(--color-primary)]">•</span>
+               <span className="whitespace-nowrap">Nailcode</span>
+               <span className="text-[var(--color-primary)]">•</span>
+               <span className="whitespace-nowrap">Gehwol</span>
+               <span className="text-[var(--color-primary)]">•</span>
+               <span className="whitespace-nowrap">Allpresan</span>
              </div>
           </div>
 
