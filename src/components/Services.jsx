@@ -163,6 +163,7 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
+        </div>
       </div>
 
       {/* Service Detail Modal - Strukturierter Inhalt */}
