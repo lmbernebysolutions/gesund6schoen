@@ -64,8 +64,7 @@
   src: url('/fonts/caveat-v17-latin-700.woff2') format('woff2');
 }
 
-/* Fallback: Google Fonts (nur wenn lokale Fonts fehlen) */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Lato:wght@300;400;700&family=Caveat:wght@400;700&display=swap');
+/* Google Fonts Import entfernt - Fonts werden jetzt lokal gehostet (DSGVO-konform) */
 
 @tailwind base;
 @tailwind components;
