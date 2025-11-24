@@ -84,13 +84,6 @@ const About = () => {
               <div className="lg:hidden w-full max-w-md mx-auto my-12 relative">
                 {imageWithReview}
               </div>
-
-              {/* Ayurveda Block (Unten) */}
-              <p className="font-medium text-[var(--color-dark)] pt-2">
-                <span className="text-xl mr-2">🌱</span>
-                Aktuell erweitern wir unser Wissen in der Ausbildung zum geprüften <strong>Ayurveda-Gesundheitsberater</strong>, 
-                um Ihre ganzheitliche Gesundheit noch besser zu unterstützen.
-              </p>
             </div>
           </div>
         </div>
