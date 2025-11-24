@@ -6,7 +6,7 @@ const Products = () => {
   const products = [
     {
       id: 1,
-      name: 'Gehwol & Fußpflege',
+      name: 'Gehwol & Allpresan',
       desc: 'Medizinische Pflege für Ihre Füße.',
       image: '/2025-07-01 (1).webp',
       featured: false
@@ -20,23 +20,30 @@ const Products = () => {
     },
     {
       id: 3,
-      name: 'Jet Set Beauty',
+      name: 'Jet Set Beauty & Nailcode',
       desc: 'Exklusive Pflege für Hände und Nägel.',
       image: '/2025-07-01 (6).webp',
+      featured: false
+    },
+    {
+      id: 4,
+      name: 'arcaya',
+      desc: 'Hochkonzentrierte Wirkstoffampullen.',
+      image: '/2025-07-01 (8).webp',
       featured: false
     }
   ];
 
   return (
     // Adjusted pb-20 for mobile to match other sections
-    <section id="produkte" className="pb-20 md:pb-32 pt-48 md:pt-56 bg-white relative overflow-hidden">
+    <section id="produkte" className="pb-20 md:pb-32 pt-20 md:pt-32 bg-white relative overflow-hidden">
       {/* Dekorativer Hintergrund-Blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--color-secondary)]/20 rounded-full blur-3xl -z-10 pointer-events-none opacity-60" />
 
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <SectionHeader
           eyebrow="Verwendete Marken"
-          title="Unsere Marken"
+          title="Unsere Partner"
           subtitle="Qualität, die unter die Haut geht."
         />
 
@@ -48,14 +55,14 @@ const Products = () => {
           </div>
 
           {/* Added pt-4 to container to prevent cropping of scaled items */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-8 pb-8 pt-4 -mx-4 px-4 md:grid md:grid-cols-3 md:gap-12 md:items-start md:overflow-visible md:pb-0 md:px-0 md:pt-0 scrollbar-hide">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-8 pb-8 pt-4 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:items-start md:overflow-visible md:pb-0 md:px-0 md:pt-0 scrollbar-hide">
             {products.map((product) => (
-              <div key={product.id} className="flex-shrink-0 w-[80vw] md:w-auto snap-center group text-center relative">
+              <div key={product.id} className="flex-shrink-0 w-[70vw] md:w-auto snap-center group text-center relative">
                 {/* Runde Bühne für das Bild */}
                 <div 
                   className={`
-                    relative w-64 h-64 md:w-72 md:h-72 mx-auto mb-8 rounded-full flex items-center justify-center 
-                    transition-all duration-500 overflow-hidden
+                    relative w-56 h-56 md:w-64 md:h-64 mx-auto mb-8 rounded-full flex items-center justify-center 
+                    transition-all duration-500 overflow-hidden bg-white
                     ${product.featured 
                       ? 'border-4 border-[var(--color-primary)] shadow-2xl scale-105' 
                       : 'border border-gray-100 shadow-lg group-hover:shadow-xl'}
@@ -71,7 +78,7 @@ const Products = () => {
                 {/* Text */}
                 <div className="relative z-10">
                   <h4 className="font-bold text-xl mb-3 text-[var(--color-dark)]">{product.name}</h4>
-                  <p className="text-gray-600 leading-relaxed px-4">{product.desc}</p>
+                  <p className="text-gray-600 leading-relaxed px-2 text-sm">{product.desc}</p>
                   
                   {/* Kleiner Indikator für Bestseller beim Featured Product */}
                   {product.featured && (
@@ -83,6 +90,25 @@ const Products = () => {
               </div>
             ))}
           </div>
+          
+          {/* Text List of all partners for completeness */}
+          <div className="mt-16 text-center">
+             <p className="text-gray-500 text-sm uppercase tracking-widest font-bold mb-4">Offizielle Kooperationspartner</p>
+             <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-gray-700 font-medium">
+               <span>Charlotte Meentzen</span>
+               <span>•</span>
+               <span>arcaya</span>
+               <span>•</span>
+               <span>Jet Set Beauty</span>
+               <span>•</span>
+               <span>Nailcode</span>
+               <span>•</span>
+               <span>Gehwol</span>
+               <span>•</span>
+               <span>Allpresan</span>
+             </div>
+          </div>
+
         </div>
       </div>
     </section>

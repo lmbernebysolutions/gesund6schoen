@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: 'Studio', href: '#studio' },
     { name: 'Leistungen', href: '#leistungen' },
     { name: 'LDM Medical', href: '#ldm' },
+    { name: 'Aktuelles', href: '#angebote' },
     { name: 'Marken', href: '#produkte' },
   ];
 

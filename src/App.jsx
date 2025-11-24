@@ -5,6 +5,7 @@ import About from './components/About';
 import Studio from './components/Studio';
 import Services from './components/Services';
 import LDMSection from './components/LDMSection';
+import Specials from './components/Specials';
 import Products from './components/Products';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
@@ -21,6 +22,7 @@ function App() {
         <Studio />
         <Services />
         <LDMSection />
+        <Specials />
         <Products />
       </main>
 
