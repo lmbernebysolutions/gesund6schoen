@@ -128,6 +128,12 @@ const Footer = () => {
           <div className="flex gap-6">
             <Link to="/impressum" className="hover:text-white transition-colors">Impressum</Link>
             <Link to="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
+            <button 
+              onClick={() => window.CookieConsent.showPreferences()} 
+              className="hover:text-white transition-colors text-left"
+            >
+              Cookie-Einstellungen
+            </button>
           </div>
         </div>
       </div>
