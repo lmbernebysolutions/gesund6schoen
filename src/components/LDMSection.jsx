@@ -80,6 +80,7 @@ const LDMSection = () => {
                 src="/wellcomet.webp" 
                 alt="LDM® Medical-SPA von Wellcomet®" 
                 className="w-full h-full object-cover object-bottom transition-opacity duration-500" 
+                loading="lazy"
               />
               
               {/* Floating Application List */}

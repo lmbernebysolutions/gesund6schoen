@@ -56,6 +56,7 @@ const Hero = () => {
                src="/2025-07-01 (12).webp" 
                alt="Gesichtsbehandlung" 
                className="relative w-full h-full object-cover rounded-blob shadow-2xl z-10"
+               fetchPriority="high"
              />
              {/* Badge: Auf Mobile etwas kleiner/angepasst */}
              <motion.div 

@@ -20,7 +20,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="font-bold text-lg text-white">Gesund & Schön</p>
-                  <p className="text-gray-300">Marktgässchen 4</p>
+                  <p className="text-gray-300">Altmarkt 5</p>
                   <p className="text-gray-300">08280 Aue-Bad Schlema</p>
                   <a 
                     href="https://maps.google.com/?q=Gesund+und+Schön+Marktgässchen+4+Aue-Bad+Schlema" 

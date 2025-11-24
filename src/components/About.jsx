@@ -12,6 +12,7 @@ const About = () => {
                   src="/2025-07-01 (9).webp" 
                   alt="Die Inhaberin" 
                   className="w-full h-full object-cover object-[25%_center]"
+                  loading="lazy"
                 />
               </div>
 

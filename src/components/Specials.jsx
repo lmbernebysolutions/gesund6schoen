@@ -47,6 +47,7 @@ const Specials = () => {
                   src={offer.image} 
                   alt={offer.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                  loading="lazy"
                 />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-sm">
                   {offer.icon}

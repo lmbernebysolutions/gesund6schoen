@@ -48,7 +48,7 @@ const Studio = () => {
             transition={{ duration: 0.3 }}
             onClick={() => setIndex(0)}
           >
-            <img src={studioImages[0].src} alt={studioImages[0].title} className="w-full h-full object-cover" />
+            <img src={studioImages[0].src} alt={studioImages[0].title} className="w-full h-full object-cover" loading="lazy" />
             <ImageOverlay label={studioImages[0].title} />
           </motion.div>
           
@@ -59,7 +59,7 @@ const Studio = () => {
             transition={{ duration: 0.3 }}
             onClick={() => setIndex(1)}
           >
-            <img src={studioImages[1].src} alt={studioImages[1].title} className="w-full h-full object-cover" />
+            <img src={studioImages[1].src} alt={studioImages[1].title} className="w-full h-full object-cover" loading="lazy" />
             <ImageOverlay label={studioImages[1].title} />
           </motion.div>
           
@@ -70,7 +70,7 @@ const Studio = () => {
             transition={{ duration: 0.3 }}
             onClick={() => setIndex(2)}
           >
-            <img src={studioImages[2].src} alt={studioImages[2].title} className="w-full h-full object-cover" />
+            <img src={studioImages[2].src} alt={studioImages[2].title} className="w-full h-full object-cover" loading="lazy" />
             <ImageOverlay label={studioImages[2].title} />
           </motion.div>
           
@@ -81,7 +81,7 @@ const Studio = () => {
             transition={{ duration: 0.3 }}
             onClick={() => setIndex(3)}
           >
-            <img src={studioImages[3].src} alt={studioImages[3].title} className="w-full h-full object-cover" />
+            <img src={studioImages[3].src} alt={studioImages[3].title} className="w-full h-full object-cover" loading="lazy" />
             <ImageOverlay label={studioImages[3].title} />
           </motion.div>
         </div>

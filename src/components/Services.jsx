@@ -3,10 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, X, Instagram, ExternalLink, Check, Leaf, Heart, Sparkles, ChevronRight } from 'lucide-react';
 import { InstagramEmbed } from 'react-social-media-embed';
 import SectionHeader from './SectionHeader';
+import { useFocusTrap } from '../hooks/useFocusTrap';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [showGallery, setShowGallery] = useState(false);
+  const modalRef = useFocusTrap(!!selectedService);
+  const galleryRef = useFocusTrap(showGallery);
 
   // Scroll-Lock wenn Modal offen ist
   useEffect(() => {
@@ -128,6 +131,7 @@ const Services = () => {
                   src={service.image} 
                   alt={service.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
                 />
                 {service.badge && (
                   <div className="absolute top-4 right-4 bg-[var(--color-dark)] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
@@ -187,6 +191,7 @@ const Services = () => {
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             />
             <motion.div 
+              ref={modalRef}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -197,6 +202,7 @@ const Services = () => {
                   src={selectedService.image} 
                   alt={selectedService.title} 
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6 md:p-8">
                   <h3 className="text-2xl md:text-4xl font-bold text-white">{selectedService.title}</h3>
@@ -258,6 +264,7 @@ const Services = () => {
               className="absolute inset-0 bg-black/80 backdrop-blur-md"
             />
             <motion.div 
+              ref={galleryRef}
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 100 }}

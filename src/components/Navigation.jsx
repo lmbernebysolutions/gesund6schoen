@@ -7,6 +7,18 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
+  // Body-Scroll-Lock für Mobile Menu
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const links = [
     { name: 'Über uns', href: '#ueber-mich' },
     { name: 'Studio', href: '#studio' },
@@ -61,7 +73,7 @@ const Navigation = () => {
         {/* Linker Bereich: Logo & Text */}
         <a href="#" className="flex items-center gap-3 group relative z-10 flex-shrink-0">
            <div className="relative w-20 h-20 md:w-24 md:h-24 overflow-hidden rounded-full border-4 border-[var(--color-primary)] group-hover:scale-105 transition-transform -ml-2 md:-ml-4">
-              <img src="/408546382_885268359830304_2573747060122933847_n.jpg" alt="Logo" className="object-cover w-full h-full" />
+              <img src="/408546382_885268359830304_2573747060122933847_n.jpg" alt="Logo" className="object-cover w-full h-full" loading="eager" />
            </div>
            <div className="leading-tight">
              <span className="block font-bold text-xl md:text-2xl text-[var(--color-dark)]">Gesund & Schön</span>
