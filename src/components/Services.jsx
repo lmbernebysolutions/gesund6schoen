@@ -95,7 +95,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="leistungen" className="pt-20 md:pt-24 pb-48 md:pb-56 relative bg-white">
+    <section id="leistungen" className="pt-20 md:pt-24 pb-48 md:pb-56 relative bg-[var(--color-bg)]">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <SectionHeader
           eyebrow="Unsere Kompetenz"
