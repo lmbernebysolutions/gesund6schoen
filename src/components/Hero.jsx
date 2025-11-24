@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, ChevronDown } from 'lucide-react';
+import HeroBackgroundAnimation from './HeroBackgroundAnimation';
 
 const Hero = () => {
   return (
@@ -8,32 +9,9 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center pt-28 md:pt-32 pb-12 md:pb-16 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/2025-07-01.webp" 
-          alt="Studio Ambiente" 
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/80" />
+        <HeroBackgroundAnimation />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/60 pointer-events-none" />
       </div>
-
-      {/* Animated Blobs */}
-      <motion.div 
-        animate={{ 
-          scale: [1, 1.1, 1],
-          rotate: [0, 5, -5, 0],
-        }}
-        transition={{ duration: 20, repeat: Infinity }}
-        className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[var(--color-secondary)] rounded-full blur-3xl opacity-40 z-0"
-      />
-      <motion.div 
-        animate={{ 
-          scale: [1, 1.2, 1],
-          x: [0, 50, 0],
-        }}
-        transition={{ duration: 15, repeat: Infinity }}
-        // Blob angepasst: bottom-0 left-0 damit er komplett in der Ecke sitzt und nicht abgeschnitten wirkt
-        className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[var(--color-primary)] rounded-full blur-3xl opacity-30 z-0 translate-y-[20%] translate-x-[-20%]"
-      />
 
       <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* TEXT CONTENT */}
