@@ -124,6 +124,16 @@ const HeroBackgroundAnimation = () => {
       .animate-float-up { animation: floatUp 3s ease-in-out forwards; }
       .animate-pulse-slow { animation: pulseSlow 4s ease-in-out infinite; }
       
+      .hero-bg-animation {
+        transform: translateX(-3.5%);
+      }
+      
+      @media (max-width: 767px) {
+        .hero-bg-animation {
+          transform: translateX(-3.5%) translateY(-15%);
+        }
+      }
+      
       @keyframes dash { to { stroke-dashoffset: 0; } }
       @keyframes popIn { 
         0% { opacity: 0; transform: scale(0); }
@@ -156,8 +166,8 @@ const HeroBackgroundAnimation = () => {
   return (
     <div 
       ref={containerRef} 
-      className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
-      style={{ opacity: 0, zIndex: 0, transform: 'translateX(-3.5%)' }} // Start invisible, slightly shifted left
+      className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden hero-bg-animation"
+      style={{ opacity: 0, zIndex: 0 }} // Start invisible, transform handled by CSS class
     >
       <div className="relative w-full max-w-[1000px] h-auto scale-125 md:scale-100">
         <svg viewBox="0 0 600 550" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-xl">
