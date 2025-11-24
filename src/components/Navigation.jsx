@@ -72,14 +72,14 @@ const Navigation = () => {
         {/* Mittlerer Bereich: Desktop Menu 
             flex-1 sorgt dafür, dass dieser Bereich den gesamten verfügbaren Platz zwischen Logo und Telefon einnimmt.
             justify-center zentriert die Links darin. */}
-        <div className="hidden lg:flex items-center gap-8 flex-1 justify-center px-4">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-8 flex-1 justify-center px-4">
           {links.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
               <a 
                 key={link.name} 
                 href={link.href} 
-                className={`text-sm font-semibold uppercase tracking-wider transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:bg-[var(--color-primary)] after:transition-all 
+                className={`text-xs xl:text-sm font-semibold uppercase tracking-wider transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:bg-[var(--color-primary)] after:transition-all 
                   ${isActive 
                     ? 'text-[var(--color-primary-dark)] after:w-full' 
                     : 'hover:text-[var(--color-primary-dark)] after:w-0 hover:after:w-full'
