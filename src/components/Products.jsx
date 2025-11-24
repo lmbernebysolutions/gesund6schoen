@@ -55,16 +55,16 @@ const Products = () => {
           </div>
 
           {/* Added pt-4 to container to prevent cropping of scaled items */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-8 pb-8 pt-4 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:items-start md:overflow-visible md:pb-0 md:px-0 md:pt-0 scrollbar-hide">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-8 pb-8 pt-4 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-8 md:items-start md:overflow-visible md:pb-0 md:px-0 md:pt-0 scrollbar-hide">
             {products.map((product) => (
               <div key={product.id} className="flex-shrink-0 w-[70vw] md:w-auto snap-center group text-center relative">
                 {/* Runde Bühne für das Bild */}
                 <div 
                   className={`
-                    relative w-56 h-56 md:w-64 md:h-64 mx-auto mb-8 rounded-full flex items-center justify-center 
+                    relative w-56 h-56 md:w-48 md:h-48 lg:w-64 lg:h-64 mx-auto mb-8 rounded-full flex items-center justify-center 
                     transition-all duration-500 overflow-hidden bg-white
                     ${product.featured 
-                      ? 'border-4 border-[var(--color-primary)] shadow-2xl scale-105' 
+                      ? 'border-4 border-[var(--color-primary)] shadow-2xl md:scale-100 lg:scale-105' 
                       : 'border border-gray-100 shadow-lg group-hover:shadow-xl'}
                   `}
                 >
