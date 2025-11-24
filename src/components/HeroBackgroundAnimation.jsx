@@ -157,7 +157,7 @@ const HeroBackgroundAnimation = () => {
     <div 
       ref={containerRef} 
       className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
-      style={{ opacity: 0, zIndex: 0 }} // Start invisible, will fade in
+      style={{ opacity: 0, zIndex: 0, transform: 'translateX(-2%)' }} // Start invisible, slightly shifted left
     >
       <div className="relative w-full max-w-[1000px] h-auto scale-125 md:scale-100">
         <svg viewBox="0 0 600 550" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-xl">
