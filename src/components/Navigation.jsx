@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Menu, X } from 'lucide-react';
 
@@ -6,6 +7,8 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   // Body-Scroll-Lock für Mobile Menu
   useEffect(() => {
@@ -71,7 +74,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-16 relative flex items-center">
         
         {/* Linker Bereich: Logo & Text */}
-        <a href="#" className="flex items-center gap-3 group relative z-10 flex-shrink-0">
+        <Link to="/" className="flex items-center gap-3 group relative z-10 flex-shrink-0">
            <div className="relative w-20 h-20 md:w-24 md:h-24 overflow-hidden rounded-full border-4 border-[var(--color-primary)] group-hover:scale-105 transition-transform -ml-2 md:-ml-4">
               <img src="/logo-gesund-und-schoen.jpg" alt="Logo" className="object-cover w-full h-full" loading="eager" />
            </div>
@@ -79,18 +82,26 @@ const Navigation = () => {
              <span className="block font-bold text-xl md:text-2xl text-[var(--color-dark)]">Gesund & Schön</span>
              <span className="block text-base md:text-lg font-hand text-[var(--color-accent)]">im Marktgässchen</span>
            </div>
-        </a>
+        </Link>
 
         {/* Mittlerer Bereich: Desktop Menu 
             flex-1 sorgt dafür, dass dieser Bereich den gesamten verfügbaren Platz zwischen Logo und Telefon einnimmt.
             justify-center zentriert die Links darin. */}
         <div className="hidden lg:flex items-center gap-4 xl:gap-8 flex-1 justify-center px-4">
           {links.map((link) => {
-            const isActive = activeSection === link.href.substring(1);
+            const isActive = isHome && activeSection === link.href.substring(1);
+            // Wenn wir auf Home sind, nutzen wir normale Anker-Links (scrolling)
+            // Wenn wir auf Unterseiten sind, nutzen wir absolute Pfade zur Home-Seite mit Hash (/#...)
+            const targetHref = isHome ? link.href : `/${link.href}`;
+            
+            // Auf Unterseiten nutzen wir <Link> (oder <a> mit Hash, da React Router HashLinks nativ nicht immer perfekt unterstützt ohne Extra-Lib)
+            // Am einfachsten: Immer <a> nutzen für Hashes, da <Link to="/#..."> einen Reload machen kann oder Hash nicht springt.
+            // Wir nutzen hier einfach <a> für beides, da es externe Navigation ist.
+            
             return (
               <a 
                 key={link.name} 
-                href={link.href} 
+                href={targetHref} 
                 className={`text-xs xl:text-sm font-semibold uppercase tracking-wider transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:bg-[var(--color-primary)] after:transition-all 
                   ${isActive 
                     ? 'text-[var(--color-primary-dark)] after:w-full' 
@@ -129,11 +140,13 @@ const Navigation = () => {
           >
             <div className="flex flex-col p-6 gap-4">
               {links.map((link) => {
-                const isActive = activeSection === link.href.substring(1);
+                const isActive = isHome && activeSection === link.href.substring(1);
+                const targetHref = isHome ? link.href : `/${link.href}`;
+                
                 return (
                   <a 
                     key={link.name} 
-                    href={link.href} 
+                    href={targetHref} 
                     onClick={() => setIsOpen(false)}
                     className={`text-lg font-medium transition-all 
                       ${isActive ? 'text-[var(--color-primary)] pl-2' : 'hover:text-[var(--color-primary)] hover:pl-2'}`}

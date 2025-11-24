@@ -67,8 +67,8 @@ export const cookieConsentConfig = {
           acceptNecessaryBtn: 'Nur notwendige',
           showPreferencesBtn: 'Einstellungen verwalten',
           footer: `
-            <a href="#" data-cc="show-privacyModal">Datenschutz</a>
-            <a href="#" data-cc="show-imprintModal">Impressum</a>
+            <a href="/datenschutz">Datenschutz</a>
+            <a href="/impressum">Impressum</a>
           `
         },
         preferencesModal: {

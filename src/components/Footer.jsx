@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Phone, Clock, Instagram } from 'lucide-react';
 import PrivacyWrapper from './PrivacyWrapper';
 
@@ -125,8 +126,8 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>© {new Date().getFullYear()} Gesund & Schön. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
-            <a href="#impressum" className="hover:text-white transition-colors">Impressum</a>
-            <a href="#datenschutz" className="hover:text-white transition-colors">Datenschutz</a>
+            <Link to="/impressum" className="hover:text-white transition-colors">Impressum</Link>
+            <Link to="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
           </div>
         </div>
       </div>

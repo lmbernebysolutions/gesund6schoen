@@ -1,38 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import About from './components/About';
-import Studio from './components/Studio';
-import Services from './components/Services';
-import LDMSection from './components/LDMSection';
-import Specials from './components/Specials';
-import Products from './components/Products';
 import Footer from './components/Footer';
-import FloatingContact from './components/FloatingContact';
 import CookieConsentManager from './components/CookieConsentManager';
-import LegalPages from './components/LegalPages';
+import Home from './pages/Home';
+import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
 import './styles/global.css';
 
 function App() {
   return (
-    <div className="app-container">
-      <CookieConsentManager />
-      <LegalPages />
-      <Navigation />
-      
-      <main>
-        <Hero />
-        <About />
-        <Studio />
-        <Services />
-        <LDMSection />
-        <Specials />
-        <Products />
-      </main>
+    <Router>
+      <div className="app-container">
+        <CookieConsentManager />
+        <Navigation />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+        </Routes>
 
-      <Footer />
-      <FloatingContact />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
