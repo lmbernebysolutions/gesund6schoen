@@ -13,7 +13,7 @@ const HeroBackgroundAnimation = () => {
       // 1. Reset (Hard Reset)
       if (containerRef.current) {
         containerRef.current.style.opacity = '0.65'; // Much more visible base opacity
-        containerRef.current.style.transition = 'opacity 1s ease-in-out';
+        containerRef.current.style.transition = 'opacity 1.5s ease-in-out';
         containerRef.current.classList.remove('animate-pulse-slow'); // Reset pulse
       }
 
@@ -40,48 +40,48 @@ const HeroBackgroundAnimation = () => {
         if (!path) return;
         const delay = path.getAttribute('data-delay') || 0;
         setTimeout(() => {
-          path.style.animation = `dash 2s ease-out forwards`;
+          path.style.animation = `dash 3.5s ease-in-out forwards`;
           path.style.opacity = '1';
         }, parseInt(delay));
       });
 
-      // Phase 2: Toes & Head (0.8s+)
+      // Phase 2: Toes & Head (slower, smoother)
       toeRefs.current.forEach((toe, index) => {
         if (!toe) return;
         setTimeout(() => {
           toe.classList.add('animate-pop');
-        }, 800 + (index * 120));
+        }, 1200 + (index * 180));
       });
 
-      // Phase 3: Fills (1.8s)
+      // Phase 3: Fills (slower)
       setTimeout(() => {
         fillRefs.current.forEach(fill => fill && fill.classList.add('animate-fade-in'));
-      }, 1800);
+      }, 2800);
 
-      // Phase 4: Energy (2s)
+      // Phase 4: Energy (slower)
       energyRefs.current.forEach((line, index) => {
         if (!line) return;
         setTimeout(() => {
           line.classList.add('animate-float-up');
-        }, 2000 + (index * 200));
+        }, 3200 + (index * 300));
       });
 
-      // Phase 5: Text (2.2s+) - Keep only decorative text
+      // Phase 5: Text (slower) - Keep only decorative text
       textRefs.current.forEach((text, index) => {
         if (!text) return;
         setTimeout(() => {
           text.classList.add('animate-fade-in');
-        }, 2200 + (index * 200));
+        }, 3600 + (index * 300));
       });
 
-      // Phase 6: Loop (9s)
+      // Phase 6: Loop (longer cycle)
       setTimeout(() => {
         if (containerRef.current) {
            containerRef.current.classList.add('animate-pulse-slow');
         }
-      }, 4000); // Start pulsing after drawing completes
+      }, 6000); // Start pulsing after drawing completes
 
-      setTimeout(loopSequence, 9000);
+      setTimeout(loopSequence, 13000);
     };
 
     const loopSequence = () => {
@@ -90,7 +90,7 @@ const HeroBackgroundAnimation = () => {
         containerRef.current.style.opacity = '0';
         setTimeout(() => {
            runAnimation();
-        }, 1000);
+        }, 1500); // Longer fade out transition
       }
     };
 
@@ -101,29 +101,30 @@ const HeroBackgroundAnimation = () => {
     const style = document.createElement('style');
     style.textContent = `
       .path-draw { fill: none; stroke-linecap: round; stroke-linejoin: round; }
-      .fill-shape { opacity: 0; transition: opacity 1.5s ease-in-out; }
+      .fill-shape { opacity: 0; transition: opacity 2.5s ease-in-out; }
       .toe { opacity: 0; transform-origin: center; transform-box: fill-box; transform: scale(0); }
       .energy-line { opacity: 0; stroke-dasharray: 100; stroke-dashoffset: 100; }
-      .text-fade-in { opacity: 0; transform: translateY(10px); transition: all 1s ease-out; }
+      .text-fade-in { opacity: 0; transform: translateY(10px); transition: all 1.5s ease-in-out; }
       
       .animate-fade-in { opacity: 1 !important; transform: translateY(0) !important; }
-      .animate-pop { animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-      .animate-float-up { animation: floatUp 2s ease-out forwards; }
-      .animate-pulse-slow { animation: pulseSlow 3s ease-in-out infinite; }
+      .animate-pop { animation: popIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+      .animate-float-up { animation: floatUp 3s ease-in-out forwards; }
+      .animate-pulse-slow { animation: pulseSlow 4s ease-in-out infinite; }
       
       @keyframes dash { to { stroke-dashoffset: 0; } }
       @keyframes popIn { 
         0% { opacity: 0; transform: scale(0); }
-        70% { opacity: 1; transform: scale(1.1); }
+        60% { opacity: 0.8; transform: scale(1.05); }
         100% { opacity: 1; transform: scale(1); }
       }
       @keyframes floatUp {
         0% { stroke-dashoffset: 100; opacity: 0; }
+        50% { opacity: 0.4; }
         100% { stroke-dashoffset: 0; opacity: 0.7; }
       }
       @keyframes pulseSlow {
         0%, 100% { opacity: 0.65; }
-        50% { opacity: 0.85; }
+        50% { opacity: 0.8; }
       }
     `;
     document.head.appendChild(style);
@@ -142,8 +143,8 @@ const HeroBackgroundAnimation = () => {
   return (
     <div 
       ref={containerRef} 
-      className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
-      style={{ opacity: 0.65, zIndex: 0 }} // More visible colors
+      className="absolute inset-0 flex items-center justify-start pointer-events-none overflow-hidden"
+      style={{ opacity: 0.65, zIndex: 0, left: '-5%' }} // More visible colors, shifted 5% left
     >
       <div className="relative w-full max-w-[1000px] h-auto scale-125 md:scale-100">
         <svg viewBox="0 0 600 550" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-xl">
