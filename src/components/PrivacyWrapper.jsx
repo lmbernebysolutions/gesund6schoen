@@ -41,7 +41,7 @@ const PrivacyWrapper = ({ category, service, children, placeholderImage, placeho
   }
 
   return (
-    <div className="relative w-full h-full min-h-[300px] bg-gray-100 rounded-3xl overflow-hidden flex flex-col items-center justify-center p-8 text-center border-4 border-white/10">
+    <div className="relative w-full h-full flex flex-col items-center justify-center bg-gray-100 text-center p-4">
       {placeholderImage && (
         <img 
           src={placeholderImage} 
@@ -50,20 +50,20 @@ const PrivacyWrapper = ({ category, service, children, placeholderImage, placeho
         />
       )}
       
-      <div className="relative z-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg max-w-md">
-        <ShieldAlert size={48} className="mx-auto mb-4 text-[var(--color-primary-dark)]" />
-        <h3 className="text-xl font-bold mb-2 text-gray-800">Inhalt blockiert</h3>
-        <p className="text-gray-600 mb-6 text-sm">
-          {placeholderText || `Dieser Inhalt wird von einem Drittanbieter (${service}) geladen. Um ihn anzuzeigen, müssen Sie externe Inhalte akzeptieren.`}
+      <div className="relative z-10 bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-sm max-w-[90%] w-full border border-gray-200">
+        <ShieldAlert size={28} className="mx-auto mb-2 text-[var(--color-primary-dark)]" />
+        <h3 className="text-sm font-bold mb-1 text-gray-800">Externer Inhalt</h3>
+        <p className="text-gray-500 mb-3 text-xs leading-tight">
+          {placeholderText || `Inhalt von ${service} gesperrt.`}
         </p>
         <button 
           onClick={handleAccept}
-          className="px-6 py-3 bg-[var(--color-primary)] text-[var(--color-dark)] rounded-full font-bold hover:bg-[var(--color-primary-dark)] transition-colors shadow-md"
+          className="px-4 py-2 bg-[var(--color-primary)] text-[var(--color-dark)] text-xs uppercase tracking-wide rounded-lg font-bold hover:bg-[var(--color-primary-dark)] transition-colors shadow-sm w-full"
         >
-          Inhalt laden & Cookies akzeptieren
+          Laden
         </button>
-        <p className="mt-3 text-xs text-gray-400">
-          Mit dem Laden aktivieren Sie Dienste der Kategorie "Marketing" (u.a. {service}).
+        <p className="mt-2 text-[10px] text-gray-400">
+          Aktiviert "Marketing"-Cookies.
         </p>
       </div>
     </div>
