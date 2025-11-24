@@ -38,7 +38,7 @@ const About = () => {
         </div>
         
         <a 
-          href="https://g.page/r/..." 
+          href="https://share.google/r2kvauHrlK8N8zvA6" 
           target="_blank"
           rel="noopener noreferrer"
           className="w-full px-4 py-2 bg-gray-50 hover:bg-gray-100 text-gray-700 text-xs lg:text-sm font-bold rounded-lg border border-gray-200 transition-colors flex items-center justify-center gap-2"
