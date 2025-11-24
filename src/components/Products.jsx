@@ -7,7 +7,7 @@ const Products = () => {
     {
       id: 1,
       name: 'Gehwol & Allpresan',
-      desc: 'Medizinische Pflege für Ihre Füße.',
+      desc: 'Hochwertige Pflege für Ihre Füße.',
       image: '/2025-07-01 (1).webp',
       featured: false
     },

@@ -14,7 +14,7 @@ const Specials = () => {
     {
       icon: <Activity className="text-[var(--color-secondary)]" size={32} />,
       title: "Spezialbehandlung: Problemfüße",
-      desc: "Pilzinfektion an Nägeln oder Füßen? Für uns kein Problem! Wir bieten professionelle Anti-Mykosetherapie, Nagelprothetik und Schwielenbehandlung. (Privatleistung - keine Rezeptabrechnung). Auch im Hausbesuch.",
+      desc: "Pilzinfektion an Nägeln oder Füßen? Für uns kein Problem! Wir bieten professionelle Anti-Mykose-Pflege, Nagelprothetik und Schwielenbehandlung. (Privatleistung - keine Rezeptabrechnung). Auch im Hausbesuch.",
       image: "/IMG_7476.webp",
       color: "bg-blue-50"
     },

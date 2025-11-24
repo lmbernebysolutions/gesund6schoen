@@ -29,7 +29,7 @@ const Hero = () => {
             <span className="font-hand text-[var(--color-accent)] block mt-2">im Marktgässchen</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg drop-shadow-sm mx-auto lg:mx-0" style={{ textShadow: '0 1px 5px rgba(255,255,255,0.8)' }}>
-            Wir vereinen medizinische Kompetenz mit purem Wohlfühl-Ambiente. 
+            Wir vereinen fachliche Kompetenz mit purem Wohlfühl-Ambiente. 
             Gönnen Sie sich eine Auszeit für Körper und Seele.
           </p>
           
@@ -67,7 +67,7 @@ const Hero = () => {
                  <CheckCircle size={20} className="lg:w-6 lg:h-6" />
                </div>
                <div className="text-xs lg:text-sm font-bold text-gray-800">
-                 Zertifizierte Behandlungen
+                 Professionelle Pflege
                </div>
              </motion.div>
           </div>

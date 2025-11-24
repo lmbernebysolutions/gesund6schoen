@@ -62,7 +62,7 @@ const LDMSection = () => {
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm text-left"> {/* Box Text kann linksbündig bleiben, wirkt technischer */}
                 <h4 className="text-xl font-bold text-[var(--color-primary)] mb-3 text-center lg:text-left">Technologie: LDM® Plus & 10 MHz</h4>
                 <p className="text-sm text-gray-200 text-center lg:text-left">
-                  Der Behandlungserfolg resultiert aus zwei modernen Technologien. Die zusätzliche <strong>10 MHz Frequenz</strong> wirkt fast ausschließlich 
+                  Die Wirkung resultiert aus zwei modernen Technologien. Die zusätzliche <strong>10 MHz Frequenz</strong> wirkt fast ausschließlich 
                   auf die oberen Hautschichten (Epidermis/Dermis) mit einer Halbwertstiefe von nur ca. 0,3 cm und moduliert effektiv dynamische Prozesse.
                 </p>
               </div>

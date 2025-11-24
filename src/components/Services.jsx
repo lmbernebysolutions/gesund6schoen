@@ -75,7 +75,7 @@ const Services = () => {
       intro: 'Der innovative LDM® Medical-SPA ist eine High-Tech Behandlungsmethode für Hautbildverbesserung und Anti-Aging mit sofort sichtbaren Ergebnissen.',
       highlights: [
         { icon: <Sparkles size={20} />, text: 'Faltenreduktion & Hautstraffung' },
-        { icon: <Check size={20} />, text: 'Behandlung von Akne & Unreinheiten' },
+        { icon: <Check size={20} />, text: 'Pflege bei Akne & Unreinheiten' },
         { icon: <Leaf size={20} />, text: 'Effektive Phonophorese (Einschleusen von Wirkstoffen)' }
       ],
       desc: `LDM® (Lokale Dynamische Mikromassage) ist eine neue Technologie, die Ultraschallwellen verschiedener Frequenzen kombiniert. Diese einzigartige Hybrid-Technologie reguliert die Balance im Gewebe und führt zu einer sichtbaren Hautverjüngung. Ideal bei Falten, schlaffer Haut, Akne oder einfach für einen glamourösen Auftritt ("Moonshine Lift").`,
