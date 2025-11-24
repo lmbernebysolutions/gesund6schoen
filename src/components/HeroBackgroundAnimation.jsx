@@ -12,8 +12,9 @@ const HeroBackgroundAnimation = () => {
     const runAnimation = () => {
       // 1. Reset (Hard Reset)
       if (containerRef.current) {
-        containerRef.current.style.opacity = '0.15'; // Base transparency requested
+        containerRef.current.style.opacity = '0.65'; // Much more visible base opacity
         containerRef.current.style.transition = 'opacity 1s ease-in-out';
+        containerRef.current.classList.remove('animate-pulse-slow'); // Reset pulse
       }
 
       // Reset Styles
@@ -74,11 +75,18 @@ const HeroBackgroundAnimation = () => {
       });
 
       // Phase 6: Loop (9s)
+      setTimeout(() => {
+        if (containerRef.current) {
+           containerRef.current.classList.add('animate-pulse-slow');
+        }
+      }, 4000); // Start pulsing after drawing completes
+
       setTimeout(loopSequence, 9000);
     };
 
     const loopSequence = () => {
       if (containerRef.current) {
+        containerRef.current.classList.remove('animate-pulse-slow'); // Stop pulse before fade out
         containerRef.current.style.opacity = '0';
         setTimeout(() => {
            runAnimation();
@@ -101,6 +109,7 @@ const HeroBackgroundAnimation = () => {
       .animate-fade-in { opacity: 1 !important; transform: translateY(0) !important; }
       .animate-pop { animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
       .animate-float-up { animation: floatUp 2s ease-out forwards; }
+      .animate-pulse-slow { animation: pulseSlow 3s ease-in-out infinite; }
       
       @keyframes dash { to { stroke-dashoffset: 0; } }
       @keyframes popIn { 
@@ -111,6 +120,10 @@ const HeroBackgroundAnimation = () => {
       @keyframes floatUp {
         0% { stroke-dashoffset: 100; opacity: 0; }
         100% { stroke-dashoffset: 0; opacity: 0.7; }
+      }
+      @keyframes pulseSlow {
+        0%, 100% { opacity: 0.65; }
+        50% { opacity: 0.85; }
       }
     `;
     document.head.appendChild(style);
@@ -130,18 +143,18 @@ const HeroBackgroundAnimation = () => {
     <div 
       ref={containerRef} 
       className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
-      style={{ opacity: 0.15, zIndex: 0 }} // Very transparent as requested
+      style={{ opacity: 0.65, zIndex: 0 }} // More visible colors
     >
-      <div className="relative w-full max-w-[1000px] h-auto opacity-50 scale-125 md:scale-100">
+      <div className="relative w-full max-w-[1000px] h-auto scale-125 md:scale-100">
         <svg viewBox="0 0 600 550" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-xl">
             <defs>
                 <style>
                     {`
-                    .fill-foot { fill: #dbeff5; } 
-                    .fill-body { fill: #e5ed89; } 
-                    .stroke-main { fill: none; stroke: #1d1d1b; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; }
-                    .stroke-detail { fill: none; stroke: #8daab5; stroke-width: 1.0; stroke-linecap: round; }
-                    .stroke-detail-green { fill: none; stroke: #aeb568; stroke-width: 1.0; stroke-linecap: round; }
+                    .fill-foot { fill: #c4e3f0; opacity: 0.9; } 
+                    .fill-body { fill: #d9e66f; opacity: 0.9; } 
+                    .stroke-main { fill: none; stroke: #1d1d1b; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; opacity: 0.9; }
+                    .stroke-detail { fill: none; stroke: #7a9ba8; stroke-width: 1.2; stroke-linecap: round; opacity: 0.8; }
+                    .stroke-detail-green { fill: none; stroke: #9daa4f; stroke-width: 1.2; stroke-linecap: round; opacity: 0.8; }
                     `}
                 </style>
             </defs>
@@ -192,8 +205,8 @@ const HeroBackgroundAnimation = () => {
 
         {/* Text Decorations */}
         <div className="absolute top-[25%] left-[10%] w-[80%] h-[30%] pointer-events-none">
-            <span ref={el => textRefs.current[0] = el} className="font-hand text-xl text-black/50 absolute bottom-0 left-[25%] rotate-[-45deg] text-fade-in">...bis Fuß</span>
-            <span ref={el => textRefs.current[1] = el} className="font-hand text-2xl text-black/50 absolute top-[10%] right-[35%] rotate-[-15deg] text-fade-in">von Kopf...</span>
+            <span ref={el => textRefs.current[0] = el} className="font-hand text-xl text-black/70 absolute bottom-0 left-[25%] rotate-[-45deg] text-fade-in">...bis Fuß</span>
+            <span ref={el => textRefs.current[1] = el} className="font-hand text-2xl text-black/70 absolute top-[10%] right-[35%] rotate-[-15deg] text-fade-in">von Kopf...</span>
         </div>
       </div>
     </div>
