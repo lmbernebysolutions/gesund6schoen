@@ -134,6 +134,12 @@ const Footer = () => {
             >
               Cookie-Einstellungen
             </button>
+            <button 
+              onClick={() => { window.CookieConsent.reset(true); window.location.reload(); }} 
+              className="hover:text-white transition-colors text-left text-xs text-gray-500 mt-2 md:mt-0"
+            >
+              Alle Cookies ablehnen (Reset)
+            </button>
           </div>
         </div>
       </div>

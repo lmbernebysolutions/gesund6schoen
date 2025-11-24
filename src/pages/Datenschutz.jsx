@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const Datenschutz = () => {
   // Scroll to top on mount
@@ -9,6 +11,10 @@ const Datenschutz = () => {
   return (
     <div className="pt-32 pb-20 bg-[var(--color-bg)] min-h-screen">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
+        <Link to="/" className="inline-flex items-center gap-2 text-[var(--color-primary-dark)] font-bold mb-8 hover:underline">
+          <ArrowLeft size={20} />
+          Zurück zur Startseite
+        </Link>
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg prose prose-lg max-w-none">
           <h1>Datenschutzerklärung</h1>
           
