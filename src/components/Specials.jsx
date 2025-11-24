@@ -8,21 +8,21 @@ const Specials = () => {
       icon: <Sparkles className="text-[var(--color-primary)]" size={32} />,
       title: "Augenpflegeset",
       desc: "Dieses besondere Set vereint die exklusive Pflege der Aloe Vera Augenpflege mit einer belebenden Augen-Vibrationsmassage. Perfekt für strahlende Augenblicke und eine erfrischte Augenpartie.",
-      image: "/IMG_7474.webp",
+      image: "/augenpflegeset-aloe-vera.webp",
       color: "bg-green-50"
     },
     {
       icon: <Activity className="text-[var(--color-secondary)]" size={32} />,
       title: "Spezialbehandlung: Problemfüße",
       desc: "Pilzinfektion an Nägeln oder Füßen? Für uns kein Problem! Wir bieten professionelle Anti-Mykose-Pflege, Nagelprothetik und Schwielenbehandlung. (Privatleistung - keine Rezeptabrechnung). Auch im Hausbesuch.",
-      image: "/IMG_7476.webp",
+      image: "/problemfusse-nagelpilz-behandlung.webp",
       color: "bg-blue-50"
     },
     {
       icon: <Gift className="text-[var(--color-accent)]" size={32} />,
       title: "Gutscheine & Geschenke",
       desc: "Machen Sie Ihren Liebsten eine Freude! Bei uns erhalten Sie Gutscheine, Adventskalender, exklusive Pflegesets und liebevoll verpackte Geschenke für jeden Anlass.",
-      image: "/IMG_7475.webp",
+      image: "/gutscheine-geschenke-kosmetik.webp",
       color: "bg-orange-50"
     }
   ];
@@ -32,7 +32,7 @@ const Specials = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <SectionHeader
           eyebrow="Besonderheiten"
-          title="Aktuelles & Angebote"
+          title="Aktuelle Kosmetik-Angebote & Specials"
           subtitle="Entdecken Sie unsere speziellen Pflege-Sets und exklusiven Services."
         />
 

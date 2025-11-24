@@ -11,10 +11,10 @@ const Studio = () => {
   const [index, setIndex] = useState(-1);
 
   const studioImages = [
-    { src: "/2025-07-01 (2).webp", title: "Kosmetiktisch", description: "Professioneller Arbeitsplatz für kosmetische Behandlungen." },
-    { src: "/2025-07-01 (3).webp", title: "Behandlungsplatz Kosmetik", description: "Moderner, heller Bereich für Gesichtsbehandlungen und Massage." },
-    { src: "/2025-07-01 (4).webp", title: "Bereich für Fußpflege", description: "Komfortable Ausstattung für Ihre Fußgesundheit." },
-    { src: "/2025-07-01 (7).webp", title: "Nageldesign-Studio", description: "Professioneller Arbeitsplatz für kreatives Nageldesign." },
+    { src: "/kosmetiktisch-behandlungsplatz.webp", title: "Kosmetiktisch", description: "Professioneller Arbeitsplatz für kosmetische Behandlungen." },
+    { src: "/behandlungsraum-kosmetik-massage.webp", title: "Behandlungsplatz Kosmetik", description: "Moderner, heller Bereich für Gesichtsbehandlungen und Massage." },
+    { src: "/fusspflege-bereich-ausstattung.webp", title: "Bereich für Fußpflege", description: "Komfortable Ausstattung für Ihre Fußgesundheit." },
+    { src: "/nageldesign-arbeitsplatz.webp", title: "Nageldesign-Studio", description: "Professioneller Arbeitsplatz für kreatives Nageldesign." },
   ];
 
   const slides = studioImages.map(item => ({ 

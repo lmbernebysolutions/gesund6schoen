@@ -9,8 +9,8 @@ const About = () => {
       
             <div className="relative z-10 w-full rounded-blob shadow-xl overflow-hidden aspect-[4/5] lg:aspect-auto lg:h-full">
                 <img 
-                  src="/2025-07-01 (9).webp" 
-                  alt="Die Inhaberin" 
+                  src="/inhaberin-behandlung-kosmetik-aue.webp" 
+                  alt="Inhaberin Kosmetikstudio Gesund & Schön bei der Behandlung" 
                   className="w-full h-full object-cover object-[25%_center]"
                   loading="lazy"
                 />

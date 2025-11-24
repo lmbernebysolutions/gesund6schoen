@@ -53,7 +53,7 @@ const Hero = () => {
           <div className="relative w-3/4 sm:w-full aspect-square max-w-[400px] lg:max-w-[600px] mx-auto">
              <div className="absolute inset-0 bg-[var(--color-primary)] rounded-blob rotate-6 opacity-20"></div>
              <img 
-               src="/2025-07-01 (12).webp" 
+               src="/ldm-medical-spa-gesichtsbehandlung-aue.webp" 
                alt="Gesichtsbehandlung" 
                className="relative w-full h-full object-cover rounded-blob shadow-2xl z-10"
                fetchPriority="high"

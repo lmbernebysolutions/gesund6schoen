@@ -8,28 +8,28 @@ const Products = () => {
       id: 1,
       name: 'Gehwol & Allpresan',
       desc: 'Hochwertige Pflege für Ihre Füße.',
-      image: '/2025-07-01 (1).webp',
+      image: '/regal-gehwol-fusspflege-produkte.webp',
       featured: false
     },
     {
       id: 2,
       name: 'Charlotte Meentzen',
       desc: 'Naturkosmetik für echte Schönheit.',
-      image: '/2025-07-01 (2).webp',
+      image: '/kosmetiktisch-behandlungsplatz.webp',
       featured: true
     },
     {
       id: 3,
       name: 'Jet Set Beauty & Nailcode',
       desc: 'Exklusive Pflege für Hände und Nägel.',
-      image: '/2025-07-01 (6).webp',
+      image: '/jet-set-beauty-produkte.webp',
       featured: false
     },
     {
       id: 4,
       name: 'arcaya',
       desc: 'Hochkonzentrierte Wirkstoffampullen.',
-      image: '/2025-07-01 (8).webp',
+      image: '/arcaya-wirkstoffampullen.webp',
       featured: false
     }
   ];
@@ -43,7 +43,7 @@ const Products = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <SectionHeader
           eyebrow="Verwendete Marken"
-          title="Unsere Partner"
+          title="Unsere Partner für Kosmetikprodukte"
           subtitle="Qualität, die unter die Haut geht."
         />
 

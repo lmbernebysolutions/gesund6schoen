@@ -77,7 +77,7 @@ const LDMSection = () => {
             {/* Visual Representation of Tech/Beauty */}
             <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl h-[500px] lg:h-[600px]">
               <img 
-                src="/wellcomet.webp" 
+                src="/ldm-wellcomet-ultraschall-geraet.webp" 
                 alt="LDM® Medical-SPA von Wellcomet®" 
                 className="w-full h-full object-cover object-bottom transition-opacity duration-500" 
                 loading="lazy"

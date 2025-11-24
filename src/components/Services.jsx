@@ -35,7 +35,7 @@ const Services = () => {
         { icon: <Heart size={20} />, text: 'Klassische Anwendungen & Moderne Verfahren' }
       ],
       desc: `Ob gezielte Hautpflege, wohltuende Gesichtsbehandlungen oder schonende Haarentfernung – wir bieten Ihnen ganzheitliche Lösungen für Ihr Wohlbefinden. In entspannter Atmosphäre tanken Sie neue Energie, während wir Ihre Haut mit effektiven Methoden und verantwortungsvoller Pflege verwöhnen. Lassen Sie sich beraten und genießen Sie individuelle Behandlungen, die perfekt auf Ihre Bedürfnisse abgestimmt sind.`,
-      image: '/2025-07-01 (8).webp',
+      image: '/arcaya-wirkstoffampullen.webp',
       color: 'var(--color-primary)',
       bg: 'bg-green-50'
     },
@@ -50,7 +50,7 @@ const Services = () => {
         { icon: <Sparkles size={20} />, text: 'Mobilservice: Wir kommen zu Ihnen nach Hause!' }
       ],
       desc: `Mit hochwertigen Produkten und sanften Techniken sorgen wir für langanhaltende Pflege, Geschmeidigkeit und Entspannung. Von der präzisen Nagel- und Hautpflege bis hin zur wohltuenden Massage – genießen Sie eine professionelle Behandlung, die nicht nur optisch überzeugt, sondern auch das Wohlgefühl steigert. Gönnen Sie sich und Ihren Füßen die Aufmerksamkeit, die sie verdienen!`,
-      image: '/2025-07-01 (4).webp',
+      image: '/fusspflege-bereich-ausstattung.webp',
       color: 'var(--color-secondary)',
       bg: 'bg-blue-50',
       badge: 'Hausbesuche möglich'
@@ -66,7 +66,7 @@ const Services = () => {
         { icon: <Heart size={20} />, text: 'Individuelle Abstimmung für gesunde Nägel' }
       ],
       desc: `Qualität und Haltbarkeit stehen bei uns an erster Stelle. Durch den Einsatz hochwertiger Produkte und professioneller Techniken garantieren wir Ihnen langanhaltende, gepflegte Nägel. Lassen Sie sich inspirieren und verwöhnen – für perfekt gestaltete Nägel, die Ihre Persönlichkeit unterstreichen.`,
-      image: '/2025-07-01 (10).webp',
+      image: '/nageldesign-beispiel.webp',
       color: 'var(--color-accent)',
       bg: 'bg-orange-50',
       hasGallery: true
@@ -82,7 +82,7 @@ const Services = () => {
         { icon: <Leaf size={20} />, text: 'Effektive Phonophorese (Einschleusen von Wirkstoffen)' }
       ],
       desc: `LDM® (Lokale Dynamische Mikromassage) ist eine neue Technologie, die Ultraschallwellen verschiedener Frequenzen kombiniert. Diese einzigartige Hybrid-Technologie reguliert die Balance im Gewebe und führt zu einer sichtbaren Hautverjüngung. Ideal bei Falten, schlaffer Haut, Akne oder einfach für einen glamourösen Auftritt ("Moonshine Lift").`,
-      image: '/wellcomet.webp',
+      image: '/ldm-wellcomet-ultraschall-geraet.webp',
       color: '#333',
       bg: 'bg-gray-100'
     }
