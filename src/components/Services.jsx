@@ -69,19 +69,19 @@ const Services = () => {
       hasGallery: true
     },
     {
-      id: 'massage',
-      title: 'Wohltuende Massagen',
-      shortDesc: 'Entspannung und Regeneration für Körper & Geist.',
-      intro: 'Erleben Sie pure Entspannung und ganzheitliches Wohlbefinden. Lösen Sie Verspannungen und tanken Sie neue Energie.',
+      id: 'ldm-medical',
+      title: 'LDM® Medical-SPA',
+      shortDesc: 'High-Tech Behandlung für sofort sichtbare Ergebnisse.',
+      intro: 'Der innovative LDM® Medical-SPA ist eine High-Tech Behandlungsmethode für Hautbildverbesserung und Anti-Aging mit sofort sichtbaren Ergebnissen.',
       highlights: [
-        { icon: <Leaf size={20} />, text: 'Ganzheitliches Wohlbefinden für Körper & Geist' },
-        { icon: <Check size={20} />, text: 'Gezielte Techniken gegen Verspannungen & Stress' },
-        { icon: <Heart size={20} />, text: 'Wellness-Massage & belebende Fußmassage' }
+        { icon: <Sparkles size={20} />, text: 'Faltenreduktion & Hautstraffung' },
+        { icon: <Check size={20} />, text: 'Behandlung von Akne & Unreinheiten' },
+        { icon: <Leaf size={20} />, text: 'Effektive Phonophorese (Einschleusen von Wirkstoffen)' }
       ],
-      desc: `In einer entspannten Atmosphäre genießen Sie sanfte Berührungen oder tiefgehende Massagetechniken, die Ihre Muskulatur lockern und neue Energie schenken. Lassen Sie sich verwöhnen und erleben Sie die harmonische Verbindung von Erholung und Regeneration für spürbares Wohlbefinden. Jede Behandlung wird individuell auf Ihre Bedürfnisse zugeschnitten.`,
-      image: '/2025-07-01 (5).webp',
-      color: '#E6B89C',
-      bg: 'bg-[#FFF8F0]'
+      desc: `LDM® (Lokale Dynamische Mikromassage) ist eine neue Technologie, die Ultraschallwellen verschiedener Frequenzen kombiniert. Diese einzigartige Hybrid-Technologie reguliert die Balance im Gewebe und führt zu einer sichtbaren Hautverjüngung. Ideal bei Falten, schlaffer Haut, Akne oder einfach für einen glamourösen Auftritt ("Moonshine Lift").`,
+      image: '/wellcomet.webp',
+      color: '#333',
+      bg: 'bg-gray-100'
     }
   ];
 
@@ -98,9 +98,9 @@ const Services = () => {
     <section id="leistungen" className="pt-20 md:pt-24 pb-48 md:pb-56 relative bg-white">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <SectionHeader
-          eyebrow="Meine Kompetenz"
+          eyebrow="Unsere Kompetenz"
           title="Vier Säulen für Ihre Schönheit"
-          subtitle="Jeder Bereich meines Studios ist darauf spezialisiert, Ihnen das beste Ergebnis zu liefern."
+          subtitle="Jeder Bereich unseres Studios ist darauf spezialisiert, Ihnen das beste Ergebnis zu liefern."
         />
 
         <div className="relative">
@@ -142,12 +142,21 @@ const Services = () => {
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">{service.shortDesc}</p>
                 
                 <div className="mt-auto space-y-2">
-                  <button 
+                  {service.id === 'ldm-medical' ? (
+                     <a 
+                     href="#ldm"
+                     className="w-full py-2 px-4 bg-white border border-[var(--color-dark)]/10 rounded-xl text-sm font-bold text-[var(--color-dark)] hover:bg-[var(--color-dark)] hover:text-white transition-colors flex items-center justify-center gap-2"
+                   >
+                     Mehr erfahren
+                   </a>
+                  ) : (
+                    <button 
                     onClick={() => setSelectedService(service)}
                     className="w-full py-2 px-4 bg-white border border-[var(--color-dark)]/10 rounded-xl text-sm font-bold text-[var(--color-dark)] hover:bg-[var(--color-dark)] hover:text-white transition-colors flex items-center justify-center gap-2"
                   >
                     Mehr erfahren
                   </button>
+                  )}
                   
                   {service.hasGallery && (
                     <button 
@@ -200,7 +209,7 @@ const Services = () => {
                 </button>
               </div>
               
-              <div className="overflow-y-auto p-6 md:p-8">
+              <div className="flex-1 overflow-y-auto p-6 md:p-8">
                 <p className="text-lg md:text-xl text-[var(--color-dark)] font-medium mb-8 leading-relaxed">
                   {selectedService.intro}
                 </p>
@@ -220,16 +229,17 @@ const Services = () => {
                 <div className="prose prose-lg max-w-none text-gray-600 mb-8">
                   <p>{selectedService.desc}</p>
                 </div>
-                
-                <div className="pt-6 border-t border-gray-100 flex justify-end sticky bottom-0 bg-white pb-2">
-                  <a 
-                    href="#kontakt" 
-                    onClick={() => setSelectedService(null)}
-                    className="w-full md:w-auto px-8 py-4 bg-[var(--color-primary)] text-[var(--color-dark)] rounded-full font-bold hover:bg-[var(--color-primary-dark)] transition-colors inline-flex items-center justify-center gap-2 shadow-lg transform hover:-translate-y-0.5"
-                  >
-                    Jetzt Termin vereinbaren <ArrowRight size={18} />
-                  </a>
-                </div>
+              </div>
+
+              {/* Action Button Fixed at Bottom */}
+              <div className="p-6 md:p-8 pt-4 border-t border-gray-100 bg-white shrink-0">
+                <a 
+                  href="#kontakt" 
+                  onClick={() => setSelectedService(null)}
+                  className="w-full md:w-auto px-8 py-4 bg-[var(--color-primary)] text-[var(--color-dark)] rounded-full font-bold hover:bg-[var(--color-primary-dark)] transition-colors inline-flex items-center justify-center gap-2 shadow-lg transform hover:-translate-y-0.5 w-full block text-center"
+                >
+                  Jetzt Termin vereinbaren <ArrowRight size={18} />
+                </a>
               </div>
             </motion.div>
           </div>

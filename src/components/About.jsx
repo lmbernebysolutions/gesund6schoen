@@ -60,7 +60,7 @@ const About = () => {
           
           {/* TEXT CONTENT */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <span className="text-[var(--color-accent)] font-hand text-2xl block mb-2">Über mich & Vertrauen</span>
+            <span className="text-[var(--color-accent)] font-hand text-2xl block mb-2">Über uns & Vertrauen</span>
             <h2 className="text-4xl font-bold mb-4">Schönheit & <span className="font-hand text-5xl ml-2 text-[var(--color-accent)]">Balance</span></h2>
             
             <div className="mb-6">

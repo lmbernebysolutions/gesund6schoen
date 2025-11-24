@@ -36,7 +36,7 @@ const Studio = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <SectionHeader
           eyebrow="Das Ambiente"
-          title="Einblick in mein Studio"
+          title="Einblick in unser Studio"
           subtitle="Sauberkeit, Hygiene und ein Ambiente zum Wohlfühlen."
         />
         

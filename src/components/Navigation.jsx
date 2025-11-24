@@ -8,7 +8,7 @@ const Navigation = () => {
   const [activeSection, setActiveSection] = useState('');
 
   const links = [
-    { name: 'Über mich', href: '#ueber-mich' },
+    { name: 'Über uns', href: '#ueber-mich' },
     { name: 'Studio', href: '#studio' },
     { name: 'Leistungen', href: '#leistungen' },
     { name: 'LDM Medical', href: '#ldm' },

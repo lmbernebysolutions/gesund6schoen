@@ -42,6 +42,11 @@ const Footer = () => {
                   <a href="tel:+4915735603381" className="font-bold text-xl text-white hover:text-[var(--color-primary)] transition-colors">
                     01573 5603381
                   </a>
+                  <p className="mt-1">
+                    <a href="mailto:gesundundschoen5@gmail.com" className="text-gray-300 hover:text-[var(--color-primary)] transition-colors">
+                      gesundundschoen5@gmail.com
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -84,7 +89,7 @@ const Footer = () => {
               <div className="mt-6 flex items-start gap-3 text-sm text-gray-300 bg-white/5 p-4 rounded-xl">
                 <Clock size={18} className="shrink-0 mt-0.5 text-[var(--color-primary)]" />
                 <p>
-                  Um Wartezeiten zu vermeiden und mir volle Zeit für Sie zu nehmen, arbeite ich ausschließlich mit Terminen.
+                  Um Wartezeiten zu vermeiden und uns volle Zeit für Sie zu nehmen, arbeiten wir ausschließlich mit Terminen.
                 </p>
               </div>
             </div>
