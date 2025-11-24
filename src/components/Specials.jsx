@@ -8,21 +8,21 @@ const Specials = () => {
       icon: <Sparkles className="text-[var(--color-primary)]" size={32} />,
       title: "Augenpflegeset",
       desc: "Dieses besondere Set vereint die exklusive Pflege der Aloe Vera Augenpflege mit einer belebenden Augen-Vibrationsmassage. Perfekt für strahlende Augenblicke und eine erfrischte Augenpartie.",
-      image: "/2025-07-01 (2).webp", // Kosmetik image
+      image: "/IMG_7474.webp",
       color: "bg-green-50"
     },
     {
       icon: <Activity className="text-[var(--color-secondary)]" size={32} />,
       title: "Spezialbehandlung: Problemfüße",
       desc: "Pilzinfektion an Nägeln oder Füßen? Für uns kein Problem! Wir bieten professionelle Anti-Mykosetherapie, Nagelprothetik und Schwielenbehandlung. (Privatleistung - keine Rezeptabrechnung). Auch im Hausbesuch.",
-      image: "/2025-07-01 (4).webp", // Fußpflege image
+      image: "/IMG_7476.webp",
       color: "bg-blue-50"
     },
     {
       icon: <Gift className="text-[var(--color-accent)]" size={32} />,
       title: "Gutscheine & Geschenke",
       desc: "Machen Sie Ihren Liebsten eine Freude! Bei uns erhalten Sie Gutscheine, Adventskalender, exklusive Pflegesets und liebevoll verpackte Geschenke für jeden Anlass.",
-      image: "/2025-07-01 (6).webp", // Product/Gift image
+      image: "/IMG_7475.webp",
       color: "bg-orange-50"
     }
   ];
