@@ -28,7 +28,7 @@ const Specials = () => {
   ];
 
   return (
-    <section id="angebote" className="py-20 md:py-32 bg-gray-50 relative overflow-hidden">
+    <section id="angebote" className="pt-24 md:pt-32 pb-20 md:pb-32 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <SectionHeader
           eyebrow="Besonderheiten"

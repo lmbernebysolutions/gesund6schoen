@@ -9,7 +9,7 @@ const LDMSection = () => {
   ];
 
   return (
-    <section id="ldm" className="py-20 lg:py-32 bg-[var(--color-dark)] text-white relative" style={{ overflow: 'visible' }}>
+    <section id="ldm" className="pt-20 lg:pt-32 pb-24 lg:pb-40 bg-[var(--color-dark)] text-white relative" style={{ overflow: 'visible' }}>
       
       {/* ------------------- SHAPE DIVIDERS ------------------- */}
       
