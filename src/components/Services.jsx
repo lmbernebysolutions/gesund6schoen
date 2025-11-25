@@ -150,7 +150,7 @@ const Services = () => {
                 <div className="mt-auto space-y-2">
                   {service.id === 'ldm-medical' ? (
                      <Link 
-                     to="/leistungen/ldm-medical"
+                     to="/ldm-medical"
                      className="w-full py-2 px-4 bg-white border border-[var(--color-dark)]/10 rounded-xl text-sm font-bold text-[var(--color-dark)] hover:bg-[var(--color-dark)] hover:text-white transition-colors flex items-center justify-center gap-2"
                    >
                      Mehr erfahren

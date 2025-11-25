@@ -74,7 +74,7 @@ const LDMSection = () => {
 
               <div className="pt-4 flex justify-center lg:justify-start">
                 <Link 
-                  to="/leistungen/ldm-medical" 
+                  to="/ldm-medical" 
                   className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-secondary)] text-[var(--color-dark)] rounded-full font-bold hover:bg-white transition-colors shadow-lg transform hover:-translate-y-0.5"
                 >
                   Mehr erfahren zur LDM®-Behandlung <ArrowRight size={20} />

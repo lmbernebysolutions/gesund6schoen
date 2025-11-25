@@ -77,7 +77,7 @@ const LDMMedical = () => {
       <Helmet>
         <title>LDM® Medical-SPA Aue | Hautverjüngung & Akne-Behandlung</title>
         <meta name="description" content="LDM® Medical-SPA in Aue-Bad Schlema: Innovative Ultraschall-Technologie gegen Falten, Akne und für straffe Haut. Sofort sichtbare Ergebnisse ohne OP." />
-        <link rel="canonical" href="https://gesundschoen-aue.de/leistungen/ldm-medical" />
+        <link rel="canonical" href="https://gesundschoen-aue.de/ldm-medical" />
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>

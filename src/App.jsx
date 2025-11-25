@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
-          <Route path="/leistungen/ldm-medical" element={<LDMMedical />} />
+          <Route path="/ldm-medical" element={<LDMMedical />} />
         </Routes>
 
         <Footer />
