@@ -21,7 +21,7 @@ const Impressum = () => {
           <h3>Angaben gemäß § 5 TMG</h3>
           <p>
             Gesund & Schön<br />
-            Inhaberin: [Vorname Nachname]<br />
+            Inhaberin: Anne-Karen Voigt<br />
             Altmarkt 5<br />
             08280 Aue-Bad Schlema
           </p>
