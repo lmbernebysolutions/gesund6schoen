@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gesundundschoen-aue.de/sitemap.xml
+Sitemap: https://gesundschoen-aue.de/sitemap.xml
