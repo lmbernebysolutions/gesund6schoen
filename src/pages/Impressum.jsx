@@ -34,8 +34,7 @@ const Impressum = () => {
 
           <h3>Umsatzsteuer-ID</h3>
           <p>
-            Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-            [DE123456789 - Bitte nachtragen]
+            Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet.
           </p>
 
           <h3>Streitschlichtung</h3>

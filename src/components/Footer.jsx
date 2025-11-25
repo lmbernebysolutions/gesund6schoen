@@ -5,7 +5,7 @@ import PrivacyWrapper from './PrivacyWrapper';
 
 const Footer = () => {
   return (
-    <footer id="kontakt" className="bg-[var(--color-dark)] text-gray-200 pt-20 pb-10">
+    <footer id="kontakt" className="bg-[var(--color-dark)] text-gray-200 pt-20 pb-28 lg:pb-10">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           
@@ -44,8 +44,9 @@ const Footer = () => {
                   <a href="tel:+4915735603381" className="font-bold text-xl text-white hover:text-[var(--color-primary)] transition-colors">
                     01573 5603381
                   </a>
-                  <p className="mt-1">
-                    <a href="mailto:gesundundschoen5@gmail.com" className="text-gray-300 hover:text-[var(--color-primary)] transition-colors">
+                  <p className="mt-1 text-sm">
+                    <a href="mailto:gesundundschoen5@gmail.com" className="text-gray-300 hover:text-[var(--color-primary)] transition-colors flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] inline-block"></span>
                       gesundundschoen5@gmail.com
                     </a>
                   </p>
