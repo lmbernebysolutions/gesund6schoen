@@ -143,6 +143,18 @@ const Footer = () => {
             </button>
           </div>
         </div>
+
+        {/* Berneby Solutions Credit */}
+        <div className="mt-8 pt-4 border-t border-white/5 text-center">
+          <a 
+            href="https://wa.me/4915511960927" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-[10px] uppercase tracking-widest text-gray-600 hover:text-[var(--color-primary)] transition-colors"
+          >
+            Designed by Berneby Solutions
+          </a>
+        </div>
       </div>
     </footer>
   );
