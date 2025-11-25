@@ -26,7 +26,7 @@ const Navigation = () => {
     { name: 'Über uns', href: '#ueber-mich', type: 'hash' },
     { name: 'Studio', href: '#studio', type: 'hash' },
     { name: 'Leistungen', href: '#leistungen', type: 'hash' },
-    { name: 'LDM Medical', href: '/leistungen/ldm-medical', type: 'page' },
+    { name: 'LDM Medical', href: '#ldm', type: 'hash' },
     { name: 'Aktuelles', href: '#angebote', type: 'hash' },
     { name: 'Marken', href: '#produkte', type: 'hash' },
   ];
@@ -71,8 +71,12 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScrollSpy);
   }, []);
 
+  const navbarClasses = (scrolled || !isHome) 
+    ? 'py-2 bg-white/90 backdrop-blur-md shadow-sm' 
+    : 'py-6 bg-transparent';
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'py-2 bg-white/90 backdrop-blur-md shadow-sm' : 'py-6 bg-transparent'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${navbarClasses}`}>
       <div className="container mx-auto px-6 md:px-12 lg:px-16 relative flex items-center">
         
         {/* Linker Bereich: Logo & Text */}

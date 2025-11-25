@@ -46,11 +46,11 @@ const LDMMedical = () => {
     },
     {
       question: "Wie viele Sitzungen sind notwendig?",
-      answer: "Schon nach der ersten Behandlung ist oft ein sofortiger 'Glow'-Effekt sichtbar (Moonshine Lift). Für nachhaltige Hautbildverbesserungen (z.B. bei Akne oder Falten) empfehlen wir eine Kur von 6 bis 10 Behandlungen im Abstand von 1-2 Wochen."
+      answer: "Oft ist schon nach der ersten Behandlung ein 'Glow'-Effekt sichtbar (Moonshine Lift). Für nachhaltige Ergebnisse (z.B. bei unreiner Haut oder Fältchen) empfehlen wir eine Kur von 6 bis 10 Behandlungen im Abstand von 1-2 Wochen."
     },
     {
       question: "Gibt es Ausfallzeiten nach der Behandlung?",
-      answer: "Nein, es gibt keine Ausfallzeiten ('Downtime'). Sie sind sofort wieder gesellschaftsfähig. Rötungen treten extrem selten auf, meist sieht die Haut direkt frischer und praller aus."
+      answer: "Nein, es gibt in der Regel keine Ausfallzeiten ('Downtime'). Sie sind sofort wieder gesellschaftsfähig. Rötungen treten extrem selten auf, meist sieht die Haut direkt frischer aus."
     },
     {
       question: "Kann LDM mit anderen Behandlungen kombiniert werden?",
@@ -100,11 +100,11 @@ const LDMMedical = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               LDM® Medical-SPA in Aue <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-primary)] to-white">
-                Hautverjüngung ohne OP
+                Optische Hautverjüngung ohne OP
               </span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
-              Erleben Sie die Zukunft der Kosmetik: Lokale Dynamische Mikromassage (LDM®) für sofort sichtbar straffere Haut und effektive Behandlung von Hautproblemen.
+              Erleben Sie moderne Kosmetik: Lokale Dynamische Mikromassage (LDM®) für ein sichtbar frischeres Hautbild und effektive Pflege bei Hautproblemen.
             </p>
           </div>
         </div>
@@ -153,17 +153,17 @@ const LDMMedical = () => {
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                   <h3 className="font-bold text-xl mb-4 text-[var(--color-primary-dark)]">Anti-Aging & Beauty</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• Faltenreduktion</li>
+                    <li>• Optische Faltenminderung</li>
                     <li>• Hautstraffung (Gesicht & Körper)</li>
                     <li>• Moonshine Lift (Sofort-Effekt)</li>
                     <li>• Bindegewebsstraffung</li>
                   </ul>
                 </div>
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                  <h3 className="font-bold text-xl mb-4 text-blue-500">Dermatologische Kosmetik</h3>
+                  <h3 className="font-bold text-xl mb-4 text-blue-500">Pflege bei Problemhaut</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• Akne & Hautunreinheiten</li>
-                    <li>• Akne-Narben</li>
+                    <li>• Unreine Haut & Akne-Pflege</li>
+                    <li>• Narbenpflege</li>
                     <li>• Dehnungsstreifen</li>
                     <li>• Couperose (begleitend)</li>
                   </ul>
@@ -208,7 +208,7 @@ const LDMMedical = () => {
                   Vereinbaren Sie jetzt Ihren Termin für eine LDM®-Behandlung und spüren Sie den Unterschied.
                 </p>
                 <a 
-                  href="tel:+4915735603381" 
+                  href="#kontakt" 
                   className="block w-full py-3 bg-[var(--color-dark)] text-white text-center rounded-xl font-bold hover:bg-black transition-colors shadow-lg"
                 >
                   Termin vereinbaren
