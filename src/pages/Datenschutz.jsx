@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft } from 'lucide-react';
 
 const Datenschutz = () => {
@@ -10,6 +11,12 @@ const Datenschutz = () => {
 
   return (
     <div className="pt-32 pb-20 bg-[var(--color-bg)] min-h-screen">
+      <Helmet>
+        <title>Datenschutzerklärung | Gesund & Schön Aue</title>
+        <meta name="description" content="Informationen zum Datenschutz, DSGVO und Ihren Rechten bei Gesund & Schön." />
+        <link rel="canonical" href="https://gesundschoen-aue.de/datenschutz" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <Link to="/" className="inline-flex items-center gap-2 text-[var(--color-primary-dark)] font-bold mb-8 hover:underline">
           <ArrowLeft size={20} />

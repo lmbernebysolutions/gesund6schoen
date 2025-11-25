@@ -6,6 +6,7 @@ import CookieConsentManager from './components/CookieConsentManager';
 import Home from './pages/Home';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
+import LDMMedical from './pages/LDMMedical';
 import './styles/global.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/leistungen/ldm-medical" element={<LDMMedical />} />
         </Routes>
 
         <Footer />

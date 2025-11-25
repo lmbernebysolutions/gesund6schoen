@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, X, Instagram, ExternalLink, Check, Leaf, Heart, Sparkles, ChevronRight } from 'lucide-react';
 import { InstagramEmbed } from 'react-social-media-embed';
@@ -148,12 +149,12 @@ const Services = () => {
                 
                 <div className="mt-auto space-y-2">
                   {service.id === 'ldm-medical' ? (
-                     <a 
-                     href="#ldm"
+                     <Link 
+                     to="/leistungen/ldm-medical"
                      className="w-full py-2 px-4 bg-white border border-[var(--color-dark)]/10 rounded-xl text-sm font-bold text-[var(--color-dark)] hover:bg-[var(--color-dark)] hover:text-white transition-colors flex items-center justify-center gap-2"
                    >
                      Mehr erfahren
-                   </a>
+                   </Link>
                   ) : (
                     <button 
                     onClick={() => setSelectedService(service)}

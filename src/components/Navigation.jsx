@@ -23,12 +23,12 @@ const Navigation = () => {
   }, [isOpen]);
 
   const links = [
-    { name: 'Über uns', href: '#ueber-mich' },
-    { name: 'Studio', href: '#studio' },
-    { name: 'Leistungen', href: '#leistungen' },
-    { name: 'LDM Medical', href: '#ldm' },
-    { name: 'Aktuelles', href: '#angebote' },
-    { name: 'Marken', href: '#produkte' },
+    { name: 'Über uns', href: '#ueber-mich', type: 'hash' },
+    { name: 'Studio', href: '#studio', type: 'hash' },
+    { name: 'Leistungen', href: '#leistungen', type: 'hash' },
+    { name: 'LDM Medical', href: '/leistungen/ldm-medical', type: 'page' },
+    { name: 'Aktuelles', href: '#angebote', type: 'hash' },
+    { name: 'Marken', href: '#produkte', type: 'hash' },
   ];
 
   useEffect(() => {
@@ -44,7 +44,9 @@ const Navigation = () => {
       // welche Section "aktiv" ist (d.h. welche den Hauptfokus hat).
       const scrollPosition = window.scrollY + window.innerHeight / 3; 
 
-      const sectionElements = links.map(link => {
+      const sectionElements = links
+        .filter(link => link.type === 'hash')
+        .map(link => {
         const id = link.href.substring(1);
         return document.getElementById(id);
       }).filter(Boolean);
@@ -140,9 +142,29 @@ const Navigation = () => {
           >
             <div className="flex flex-col p-6 gap-4">
               {links.map((link) => {
-                const isActive = isHome && activeSection === link.href.substring(1);
-                const targetHref = isHome ? link.href : `/${link.href}`;
+                const isActive = link.type === 'hash' 
+                  ? (isHome && activeSection === link.href.substring(1))
+                  : location.pathname === link.href;
+
+                let targetHref = link.href;
+                if (link.type === 'hash' && !isHome) {
+                  targetHref = `/${link.href}`;
+                }
                 
+                if (link.type === 'page') {
+                   return (
+                    <Link 
+                      key={link.name} 
+                      to={link.href} 
+                      onClick={() => setIsOpen(false)}
+                      className={`text-lg font-medium transition-all 
+                        ${isActive ? 'text-[var(--color-primary)] pl-2' : 'hover:text-[var(--color-primary)] hover:pl-2'}`}
+                    >
+                      {link.name}
+                    </Link>
+                   );
+                }
+
                 return (
                   <a 
                     key={link.name} 
