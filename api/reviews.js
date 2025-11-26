@@ -13,8 +13,8 @@ export default async function handler(req, res) {
     return;
   }
 
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-  const placeId = process.env.GOOGLE_PLACE_ID;
+  const apiKey = process.env.GOOGLE_PLACES_API_KEY || process.env.google_places_api_key;
+  const placeId = process.env.GOOGLE_PLACE_ID || process.env.google_place_id;
 
   if (!apiKey || !placeId) {
     // Return mock data if env vars are missing (for development/preview without keys)
