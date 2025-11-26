@@ -54,9 +54,11 @@ const Hero = () => {
              <div className="absolute inset-0 bg-[var(--color-primary)] rounded-blob rotate-6 opacity-20"></div>
              <img 
                src="/ldm-medical-spa-gesichtsbehandlung-aue.webp" 
-               alt="Gesichtsbehandlung" 
+               alt="Gesichtsbehandlung bei Gesund & Schön" 
                className="relative w-full h-full object-cover rounded-blob shadow-2xl z-10"
                fetchpriority="high"
+               width="600"
+               height="600"
              />
              {/* Badge: Auf Mobile etwas kleiner/angepasst */}
              <motion.div 

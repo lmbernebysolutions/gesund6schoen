@@ -82,7 +82,7 @@ const Navigation = () => {
         {/* Linker Bereich: Logo & Text */}
         <Link to="/" className="flex items-center gap-3 group relative z-10 flex-shrink-0">
            <div className="relative w-20 h-20 md:w-24 md:h-24 overflow-hidden rounded-full border-4 border-[var(--color-primary)] group-hover:scale-105 transition-transform -ml-2 md:-ml-4">
-              <img src="/logo-gesund-und-schoen.jpg" alt="Logo" className="object-cover w-full h-full" loading="eager" />
+              <img src="/logo-gesund-und-schoen.jpg" alt="Logo Gesund & Schön Kosmetikstudio" className="object-cover w-full h-full" loading="eager" width="96" height="96" />
            </div>
            <div className="leading-tight">
              <span className="block font-bold text-xl md:text-2xl text-[var(--color-dark)]">Gesund & Schön</span>

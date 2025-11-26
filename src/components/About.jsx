@@ -35,6 +35,8 @@ const About = () => {
                   alt="Inhaberin Kosmetikstudio Gesund & Schön bei der Behandlung" 
                   className="w-full h-full object-cover object-[25%_center]"
                   loading="lazy"
+                  width="400"
+                  height="500"
                 />
               </div>
 
