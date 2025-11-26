@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Star, ExternalLink } from 'lucide-react';
 
 const About = () => {
+  const [rating, setRating] = useState(4.9);
+  const [reviewCount, setReviewCount] = useState(null);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch('/api/reviews');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.rating) {
+            setRating(data.rating);
+            setReviewCount(data.user_ratings_total);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to fetch reviews:', error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
   const imageWithReview = (
     <div className="relative w-full lg:h-full">
       <div className="absolute top-[-20px] left-[-20px] w-full h-full border-2 border-[var(--color-primary)] rounded-blob z-0 transform -rotate-3 hidden lg:block"></div>
@@ -24,7 +46,7 @@ const About = () => {
         className="absolute -bottom-6 -right-4 lg:-bottom-8 lg:-right-8 z-20 bg-white p-4 lg:p-6 rounded-2xl shadow-xl border border-gray-100 max-w-[280px]"
       >
         <div className="flex items-center gap-3 mb-3">
-          <div className="text-3xl lg:text-4xl font-bold text-[var(--color-dark)]">4.9</div>
+          <div className="text-3xl lg:text-4xl font-bold text-[var(--color-dark)]">{rating}</div>
           <div>
             <div className="flex text-yellow-400 text-xs lg:text-sm">
               <Star fill="currentColor" size={14} />
@@ -33,7 +55,9 @@ const About = () => {
               <Star fill="currentColor" size={14} />
               <Star fill="currentColor" size={14} />
             </div>
-            <p className="text-xs text-gray-500 mt-0.5">Google Rezensionen</p>
+            <p className="text-xs text-gray-500 mt-0.5">
+              {reviewCount ? `${reviewCount} Google Rezensionen` : 'Google Rezensionen'}
+            </p>
           </div>
         </div>
         
