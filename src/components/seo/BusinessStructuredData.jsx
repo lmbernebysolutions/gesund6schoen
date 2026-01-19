@@ -6,9 +6,9 @@ export const BusinessStructuredData = () => {
         "@context": "https://schema.org",
         "@type": "HealthAndBeautyBusiness",
         "name": "Gesund & Schön",
-        "image": "https://www.gesund-und-schoen-aue.de/logo-gesund-und-schoen.jpg",
-        "@id": "https://www.gesund-und-schoen-aue.de",
-        "url": "https://www.gesund-und-schoen-aue.de",
+        "image": "https://www.gesundschoen-aue.de/logo-gesund-und-schoen.jpg",
+        "@id": "https://www.gesundschoen-aue.de",
+        "url": "https://www.gesundschoen-aue.de",
         "telephone": "+4915735603381",
         "address": {
             "@type": "PostalAddress",

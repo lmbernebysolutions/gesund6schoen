@@ -84,7 +84,7 @@ const Products = () => {
                       {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "ImageObject",
-                        "contentUrl": `https://www.gesund-und-schoen-aue.de${product.image}`,
+                        "contentUrl": `https://www.gesundschoen-aue.de${product.image}`,
                         "description": product.desc,
                         "name": product.name,
                         "representativeOfPage": "False",

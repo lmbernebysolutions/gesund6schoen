@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, canonical, image, type = 'website' }) => {
   const siteTitle = 'Gesund & Schön Aue';
-  const siteUrl = 'https://www.gesund-und-schoen-aue.de';
+  const siteUrl = 'https://www.gesundschoen-aue.de';
   const defaultImage = `${siteUrl}/logo-gesund-und-schoen.jpg`; // Default image, verify path
 
   const metaTitle = title ? `${title} | ${siteTitle}` : siteTitle;
