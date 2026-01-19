@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import SEO from '../components/seo/SEO';
+import { BusinessStructuredData } from '../components/seo/BusinessStructuredData';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Studio from '../components/Studio';
@@ -12,11 +14,12 @@ import FloatingContact from '../components/FloatingContact';
 const Home = () => {
   return (
     <main>
-      <Helmet>
-        <title>Gesund & Schön im Marktgässchen - Kosmetikstudio Aue-Bad Schlema</title>
-        <meta name="description" content="Ihr Kosmetikstudio in Aue-Bad Schlema. 💆‍♀️ Ganzheitliche Kosmetik, Fußpflege & LDM® Medical-SPA. Jetzt Termin für Ihre Auszeit vereinbaren! 📞" />
-        <link rel="canonical" href="https://gesundschoen-aue.de/" />
-      </Helmet>
+      <SEO
+        title="Gesund & Schön im Marktgässchen - Kosmetikstudio Aue-Bad Schlema"
+        description="Ihr Kosmetikstudio in Aue-Bad Schlema. 💆‍♀️ Ganzheitliche Kosmetik, Fußpflege & LDM® Medical-SPA. Jetzt Termin für Ihre Auszeit vereinbaren! 📞"
+        canonical="https://gesundschoen-aue.de/"
+      />
+      <BusinessStructuredData />
       <Hero />
       <About />
       <Studio />

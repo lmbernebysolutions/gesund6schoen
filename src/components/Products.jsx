@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SectionHeader from './SectionHeader';
 import { ChevronRight } from 'lucide-react';
 
@@ -59,28 +60,46 @@ const Products = () => {
             {products.map((product) => (
               <div key={product.id} className="flex-shrink-0 w-[70vw] md:w-auto snap-center group text-center relative">
                 {/* Runde Bühne für das Bild */}
-                <div 
+                <div
                   className={`
                     relative w-56 h-56 md:w-48 md:h-48 lg:w-64 lg:h-64 mx-auto mb-8 rounded-full flex items-center justify-center 
                     transition-all duration-500 overflow-hidden bg-white
-                    ${product.featured 
-                      ? 'border-4 border-[var(--color-primary)] shadow-2xl md:scale-100 lg:scale-105' 
+                    ${product.featured
+                      ? 'border-4 border-[var(--color-primary)] shadow-2xl md:scale-100 lg:scale-105'
                       : 'border border-gray-100 shadow-lg group-hover:shadow-xl'}
                   `}
                 >
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                   />
                 </div>
 
                 {/* Text */}
                 <div className="relative z-10">
+                  <Helmet>
+                    <script type="application/ld+json">
+                      {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ImageObject",
+                        "contentUrl": `https://www.gesund-und-schoen-aue.de${product.image}`,
+                        "description": product.desc,
+                        "name": product.name,
+                        "representativeOfPage": "False",
+                        "caption": `${product.name} kaufen in Aue`,
+                        "provider": {
+                          "@type": "LocalBusiness",
+                          "name": "Gesund & Schön",
+                          "location": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Aue" } }
+                        }
+                      })}
+                    </script>
+                  </Helmet>
                   <h4 className="font-bold text-xl mb-3 text-[var(--color-dark)]">{product.name}</h4>
                   <p className="text-gray-600 leading-relaxed px-2 text-sm">{product.desc}</p>
-                  
+
                   {/* Kleiner Indikator für Bestseller beim Featured Product */}
                   {product.featured && (
                     <div className="mt-4 inline-block px-4 py-1 bg-[var(--color-primary)]/20 text-[var(--color-dark)] text-xs font-bold uppercase tracking-wider rounded-full">
@@ -91,23 +110,23 @@ const Products = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Text List of all partners for completeness */}
           <div className="mt-10 md:mt-16 text-center px-4">
-             <p className="text-gray-500 text-xs md:text-sm uppercase tracking-widest font-bold mb-4 md:mb-6">Offizielle Kooperationspartner</p>
-             <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 md:gap-x-8 text-sm md:text-base text-gray-700 font-medium leading-relaxed">
-               <span className="whitespace-nowrap">Charlotte Meentzen</span>
-               <span className="text-[var(--color-primary)]">•</span>
-               <span className="whitespace-nowrap">arcaya</span>
-               <span className="text-[var(--color-primary)]">•</span>
-               <span className="whitespace-nowrap">Jet Set Beauty</span>
-               <span className="text-[var(--color-primary)]">•</span>
-               <span className="whitespace-nowrap">Nailcode</span>
-               <span className="text-[var(--color-primary)]">•</span>
-               <span className="whitespace-nowrap">Gehwol</span>
-               <span className="text-[var(--color-primary)]">•</span>
-               <span className="whitespace-nowrap">Allpresan</span>
-             </div>
+            <p className="text-gray-500 text-xs md:text-sm uppercase tracking-widest font-bold mb-4 md:mb-6">Offizielle Kooperationspartner</p>
+            <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 md:gap-x-8 text-sm md:text-base text-gray-700 font-medium leading-relaxed">
+              <span className="whitespace-nowrap">Charlotte Meentzen</span>
+              <span className="text-[var(--color-primary)]">•</span>
+              <span className="whitespace-nowrap">arcaya</span>
+              <span className="text-[var(--color-primary)]">•</span>
+              <span className="whitespace-nowrap">Jet Set Beauty</span>
+              <span className="text-[var(--color-primary)]">•</span>
+              <span className="whitespace-nowrap">Nailcode</span>
+              <span className="text-[var(--color-primary)]">•</span>
+              <span className="whitespace-nowrap">Gehwol</span>
+              <span className="text-[var(--color-primary)]">•</span>
+              <span className="whitespace-nowrap">Allpresan</span>
+            </div>
           </div>
 
         </div>

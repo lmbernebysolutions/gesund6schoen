@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import SEO from '../components/seo/SEO';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Sparkles, Check, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -74,10 +75,12 @@ const LDMMedical = () => {
 
   return (
     <div className="bg-[var(--color-bg)] min-h-screen">
+      <SEO
+        title="LDM® Medical-SPA Aue | Hautverjüngung & Akne-Behandlung"
+        description="LDM® Medical-SPA in Aue-Bad Schlema: Innovative Ultraschall-Technologie gegen Falten, Akne und für straffe Haut. Sofort sichtbare Ergebnisse ohne OP."
+        canonical="https://gesundschoen-aue.de/ldm-medical"
+      />
       <Helmet>
-        <title>LDM® Medical-SPA Aue | Hautverjüngung & Akne-Behandlung</title>
-        <meta name="description" content="LDM® Medical-SPA in Aue-Bad Schlema: Innovative Ultraschall-Technologie gegen Falten, Akne und für straffe Haut. Sofort sichtbare Ergebnisse ohne OP." />
-        <link rel="canonical" href="https://gesundschoen-aue.de/ldm-medical" />
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
@@ -86,7 +89,7 @@ const LDMMedical = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-[var(--color-dark)] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-           <div className="absolute top-[-50%] right-[-20%] w-[800px] h-[800px] bg-[var(--color-primary)] rounded-full blur-3xl" />
+          <div className="absolute top-[-50%] right-[-20%] w-[800px] h-[800px] bg-[var(--color-primary)] rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
           <Link to="/" className="inline-flex items-center gap-2 text-[var(--color-primary)] font-bold mb-8 hover:underline hover:text-white transition-colors">
@@ -112,10 +115,10 @@ const LDMMedical = () => {
 
       <div className="container mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-24">
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
-          
+
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-16">
-            
+
             {/* Wie funktioniert es? */}
             <section>
               <h2 className="text-3xl font-bold mb-6 text-[var(--color-dark)] flex items-center gap-3">
@@ -191,9 +194,9 @@ const LDMMedical = () => {
             <div className="sticky top-32 space-y-8">
               {/* Image Box */}
               <div className="rounded-2xl overflow-hidden shadow-lg relative h-64">
-                <img 
-                  src="/ldm-wellcomet-ultraschall-geraet.webp" 
-                  alt="LDM Wellcomet Gerät" 
+                <img
+                  src="/ldm-wellcomet-ultraschall-geraet.webp"
+                  alt="LDM Wellcomet Gerät"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
@@ -207,8 +210,8 @@ const LDMMedical = () => {
                 <p className="text-gray-700 mb-6">
                   Vereinbaren Sie jetzt Ihren Termin für eine LDM®-Behandlung und spüren Sie den Unterschied.
                 </p>
-                <a 
-                  href="#kontakt" 
+                <a
+                  href="#kontakt"
                   className="block w-full py-3 bg-[var(--color-dark)] text-white text-center rounded-xl font-bold hover:bg-black transition-colors shadow-lg"
                 >
                   Termin vereinbaren

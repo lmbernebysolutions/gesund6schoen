@@ -7,6 +7,8 @@ export default async function handler(req, res) {
     'Access-Control-Allow-Headers',
     'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
   );
+  // Caching: Browser 1h, CDN/Vercel also 1h
+  res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate=59');
 
   if (req.method === 'OPTIONS') {
     res.status(200).end();

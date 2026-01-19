@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import SEO from '../components/seo/SEO';
 import { ArrowLeft } from 'lucide-react';
 
 const Datenschutz = () => {
@@ -11,10 +12,12 @@ const Datenschutz = () => {
 
   return (
     <div className="pt-32 pb-20 bg-[var(--color-bg)] min-h-screen">
+      <SEO
+        title="Datenschutzerklärung"
+        description="Informationen zum Datenschutz, DSGVO und Ihren Rechten bei Gesund & Schön."
+        canonical="https://gesundschoen-aue.de/datenschutz"
+      />
       <Helmet>
-        <title>Datenschutzerklärung | Gesund & Schön Aue</title>
-        <meta name="description" content="Informationen zum Datenschutz, DSGVO und Ihren Rechten bei Gesund & Schön." />
-        <link rel="canonical" href="https://gesundschoen-aue.de/datenschutz" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
@@ -24,9 +27,9 @@ const Datenschutz = () => {
         </Link>
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg prose prose-lg max-w-none">
           <h1>Datenschutzerklärung</h1>
-          
+
           <h2>1. Datenschutz auf einen Blick</h2>
-          
+
           <h3>Allgemeine Hinweise</h3>
           <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
 
