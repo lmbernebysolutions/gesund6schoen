@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import { BusinessStructuredData } from './components/seo/BusinessStructuredData';
 import CookieConsentManager from './components/CookieConsentManager';
 import './styles/global.css';
 
@@ -22,9 +23,10 @@ function App() {
   return (
     <Router>
       <div className="app-container">
+        <BusinessStructuredData />
         <CookieConsentManager />
         <Navigation />
-        
+
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
