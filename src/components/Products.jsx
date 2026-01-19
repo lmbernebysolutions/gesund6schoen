@@ -89,10 +89,9 @@ const Products = () => {
                         "name": product.name,
                         "representativeOfPage": "False",
                         "caption": `${product.name} kaufen in Aue`,
-                        "provider": {
-                          "@type": "LocalBusiness",
-                          "name": "Gesund & Schön",
-                          "location": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Aue" } }
+                        "author": {
+                          "@type": "Organization",
+                          "name": "Gesund & Schön"
                         }
                       })}
                     </script>
